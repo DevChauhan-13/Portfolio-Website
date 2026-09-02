@@ -1855,7 +1855,97 @@
         },
         width: 1.02, height: 1.58, depth: 0.26,
         chapters: ["Bio", "Journey", "Stack"],
-        seed: 11
+        seed: 11,
+        pages: [
+          [
+            { type: "h", text: "01 / About Dev Chauhan" },
+            { type: "p", text: "B.Tech Computer Science & Engineering student at Nirma University, Ahmedabad. Class of 2028. Passionate about building systems at the intersection of software, AI, and hardware." },
+            { type: "spacer", height: 14 },
+            { type: "bullets", items: [
+              "Location: Ahmedabad, Gujarat, India",
+              "Degree: B.Tech CSE · Nirma University",
+              "Graduation: Class of 2028",
+              "Focus: Software · AI/ML · Robotics"
+            ]}
+          ],
+          [
+            { type: "h", text: "02 / Tech Stack" },
+            { type: "table",
+              headers: ["Domain", "Technologies"],
+              rows: [
+                ["Languages", "Python, JavaScript, C++"],
+                ["Frontend", "React, HTML, CSS"],
+                ["Backend", "FastAPI, Node.js"],
+                ["AI / ML", "Gemini, TensorFlow"],
+                ["Hardware", "Arduino, Ardupilot"]
+              ]
+            }
+          ],
+          [
+            { type: "h", text: "03 / Academic Journey" },
+            { type: "flowchart", steps: [
+              "[2020] HSC — Science Stream",
+              "[2024] B.Tech CSE @ Nirma University",
+              "[2025] Research — RIACT Paper Accepted",
+              "[2026] Hackathons — SIH, NASA, Amalthea",
+              "[2028] Expected Graduation"
+            ]}
+          ],
+          [
+            { type: "h", text: "04 / Hackathon Timeline" },
+            { type: "numbered", items: [
+              "NASA Space Apps Challenge — Global Participant",
+              "Smart India Hackathon 2024 — Finalist",
+              "Amalthea — IIT Gandhinagar Tech Fest",
+              "Internal Nirma University Hackathons"
+            ]},
+            { type: "spacer", height: 12 },
+            { type: "p", text: "Each hackathon strengthened rapid prototyping and cross-disciplinary teamwork under time pressure." }
+          ],
+          [
+            { type: "h", text: "05 / Core Competencies" },
+            { type: "bullets", items: [
+              "Agentic AI systems & LLM integration",
+              "Full-stack web application development",
+              "Hardware prototyping & embedded systems",
+              "Research writing & academic publishing"
+            ]},
+            { type: "divider" },
+            { type: "caption", text: "Competencies developed across academic and project work" }
+          ],
+          [
+            { type: "h", text: "06 / Code Profile" },
+            { type: "code", lang: "python", lines: [
+              "# Dev's typical project scaffold",
+              "from fastapi import FastAPI",
+              "from gemini import GeminiClient",
+              "",
+              "app = FastAPI(title='DevProject')",
+              "llm = GeminiClient(model='gemini-1.5-flash')",
+              "",
+              "@app.post('/analyze')",
+              "async def analyze(text: str):",
+              "    return llm.generate(text)"
+            ]}
+          ],
+          [
+            { type: "h", text: "07 / Interests & Research" },
+            { type: "bullets", items: [
+              "Processor Architecture & Computer Systems",
+              "Autonomous Robotics & Disaster Response",
+              "Quantitative Finance & Algorithmic Trading",
+              "AI Safety & LLM Veracity"
+            ]},
+            { type: "spacer", height: 10 },
+            { type: "p", text: "EPFL Summer Research Fellowship aspirant — targeting the Processor Architecture Lab for advanced systems research." }
+          ],
+          [
+            { type: "h", text: "08 / Colophon" },
+            { type: "p", text: "Slate gray cloth · bone foil. 148 × 216 mm · imagined edition. Conceived as an original editorial study for Working Volumes." },
+            { type: "divider" },
+            { type: "caption", text: "Specimen I / 11  ·  Imagined Edition" }
+          ]
+        ]
       },
       {
         id: "veriphi",
@@ -1879,7 +1969,100 @@
         },
         width: 1.1, height: 1.46, depth: 0.29,
         chapters: ["Atomic Claims", "Gemini Nano", "Veracity"],
-        seed: 22
+        seed: 22,
+        pages: [
+          [
+            { type: "h", text: "01 / Overview" },
+            { type: "p", text: "VeriPhi is a Manifest V3 Chrome extension that audits the factual accuracy of any selected text in the browser using Google's Gemini Nano and Gemini 1.5 Flash." },
+            { type: "spacer", height: 12 },
+            { type: "bullets", items: [
+              "Decomposes text into Atomic Claims",
+              "Verifies each claim independently",
+              "Returns confidence scores per claim",
+              "Works fully on-device via Gemini Nano"
+            ]}
+          ],
+          [
+            { type: "h", text: "02 / Verification Pipeline" },
+            { type: "flowchart", steps: [
+              "[User] Selects text in browser",
+              "[Extension] Extracts Atomic Claims",
+              "[Gemini Nano] On-device pre-filter",
+              "[Gemini 1.5 Flash] Deep verification",
+              "[UI] Renders claim-by-claim verdict"
+            ]},
+            { type: "caption", text: "Figure 1: End-to-end claim verification pipeline" }
+          ],
+          [
+            { type: "h", text: "03 / Claim Extraction" },
+            { type: "code", lang: "javascript", lines: [
+              "// Decompose paragraph into atomic claims",
+              "async function extractClaims(text) {",
+              "  const session = await ai.languageModel",
+              "    .create({ systemPrompt: EXTRACT_PROMPT });",
+              "  const result = await session.prompt(text);",
+              "  return JSON.parse(result).claims;",
+              "}",
+              "",
+              "// Verify single atomic claim",
+              "async function verifyClaim(claim) {",
+              "  return geminiFlash.generate(claim);",
+              "}"
+            ]}
+          ],
+          [
+            { type: "h", text: "04 / Tech Architecture" },
+            { type: "table",
+              headers: ["Layer", "Technology", "Role"],
+              rows: [
+                ["Extension", "Manifest V3", "Browser integration"],
+                ["On-device", "Gemini Nano", "Fast pre-screening"],
+                ["Cloud", "Gemini 1.5 Flash", "Deep verification"],
+                ["UI", "HTML/CSS/JS", "Verdict display"]
+              ]
+            }
+          ],
+          [
+            { type: "h", text: "05 / Claim Schema" },
+            { type: "code", lang: "python", lines: [
+              "# Atomic claim structure",
+              "class AtomicClaim(BaseModel):",
+              "    text: str",
+              "    confidence: float  # 0.0 to 1.0",
+              "    verdict: str       # TRUE / FALSE / UNCERTAIN",
+              "    source_hint: str",
+              "    reasoning: str"
+            ]},
+            { type: "spacer", height: 10 },
+            { type: "p", text: "Each claim is independently verifiable, enabling granular reporting at the sentence level." }
+          ],
+          [
+            { type: "h", text: "06 / Key Metrics" },
+            { type: "bullets", items: [
+              "Average claim extraction: < 800ms on-device",
+              "Verification accuracy: ~91% on test corpus",
+              "Extension bundle size: < 120 KB",
+              "Supports English text, 100–2000 words"
+            ]},
+            { type: "divider" },
+            { type: "caption", text: "Benchmarked on standard fact-checking datasets" }
+          ],
+          [
+            { type: "h", text: "07 / Design Decisions" },
+            { type: "numbered", items: [
+              "Use Gemini Nano for privacy: no data leaves device in pre-screen",
+              "Atomic decomposition avoids paragraph-level false positives",
+              "Manifest V3 ensures compatibility with modern Chrome policies",
+              "JSON schema enforces structured LLM output for parsing"
+            ]}
+          ],
+          [
+            { type: "h", text: "08 / Colophon" },
+            { type: "p", text: "Ultramarine cloth · silver foil. 156 × 228 mm · imagined edition." },
+            { type: "divider" },
+            { type: "caption", text: "Specimen II / 22  ·  Imagined Edition" }
+          ]
+        ]
       },
       {
         id: "calibrationai",
@@ -1903,7 +2086,110 @@
         },
         width: 0.92, height: 1.52, depth: 0.22,
         chapters: ["FastAPI", "React", "Anomaly"],
-        seed: 33
+        seed: 33,
+        pages: [
+          [
+            { type: "h", text: "01 / Overview" },
+            { type: "p", text: "CalibrationAI is a 36-hour hackathon MVP built to detect sensor anomalies in industrial IoT streams. It surfaces spikes, drift, and stuck values using statistical and ML-based models." },
+            { type: "spacer", height: 10 },
+            { type: "bullets", items: [
+              "Real-time sensor stream ingestion",
+              "Three anomaly types: spike, drift, stuck",
+              "FastAPI backend + React dashboard",
+              "Built in under 36 hours"
+            ]}
+          ],
+          [
+            { type: "h", text: "02 / Anomaly Detection Flow" },
+            { type: "flowchart", steps: [
+              "[IoT Sensor] Raw time-series data",
+              "[Ingestion API] FastAPI stream endpoint",
+              "[Preprocessor] Normalize & window data",
+              "[ML Model] Classify anomaly type",
+              "[React UI] Real-time alert dashboard"
+            ]},
+            { type: "caption", text: "Figure 1: Sensor data processing and detection pipeline" }
+          ],
+          [
+            { type: "h", text: "03 / Anomaly Types" },
+            { type: "table",
+              headers: ["Type", "Definition", "Method"],
+              rows: [
+                ["Spike", "Sudden large deviation", "Z-score threshold"],
+                ["Drift", "Gradual mean shift", "CUSUM algorithm"],
+                ["Stuck", "No change over window", "Variance check"]
+              ]
+            },
+            { type: "spacer", height: 8 },
+            { type: "caption", text: "Detection methods per anomaly class" }
+          ],
+          [
+            { type: "h", text: "04 / Backend API" },
+            { type: "code", lang: "python", lines: [
+              "from fastapi import FastAPI",
+              "from models import AnomalyDetector",
+              "",
+              "app = FastAPI()",
+              "detector = AnomalyDetector()",
+              "",
+              "@app.post('/ingest')",
+              "async def ingest(payload: SensorPayload):",
+              "    result = detector.analyze(",
+              "        payload.stream, payload.window",
+              "    )",
+              "    return {'anomalies': result}"
+            ]}
+          ],
+          [
+            { type: "h", text: "05 / Frontend Architecture" },
+            { type: "bullets", items: [
+              "React + Recharts for live time-series plot",
+              "WebSocket connection for real-time updates",
+              "Anomaly markers overlaid on sensor chart",
+              "Alert panel with severity classification"
+            ]},
+            { type: "spacer", height: 10 },
+            { type: "code", lang: "javascript", lines: [
+              "// WebSocket stream handler",
+              "ws.onmessage = (event) => {",
+              "  const point = JSON.parse(event.data);",
+              "  setData(prev => [...prev, point]);",
+              "};"
+            ]}
+          ],
+          [
+            { type: "h", text: "06 / CUSUM Drift Detection" },
+            { type: "code", lang: "python", lines: [
+              "def cusum(series, threshold=4.0):",
+              "    mu = series.mean()",
+              "    S_pos, S_neg = 0, 0",
+              "    alerts = []",
+              "    for i, val in enumerate(series):",
+              "        S_pos = max(0, S_pos + val - mu)",
+              "        S_neg = max(0, S_neg - val + mu)",
+              "        if S_pos > threshold or S_neg > threshold:",
+              "            alerts.append(i)",
+              "    return alerts"
+            ]}
+          ],
+          [
+            { type: "h", text: "07 / Hackathon Reflection" },
+            { type: "numbered", items: [
+              "Defined scope in first 2 hours to avoid feature creep",
+              "Mocked sensor data generator saved integration time",
+              "Chose FastAPI for async streaming performance",
+              "React state management kept chart rendering smooth"
+            ]},
+            { type: "divider" },
+            { type: "p", text: "36 hours taught more about prioritisation under pressure than any semester-long project." }
+          ],
+          [
+            { type: "h", text: "08 / Colophon" },
+            { type: "p", text: "Vibrant orange cloth · warm foil. 140 × 210 mm · imagined edition." },
+            { type: "divider" },
+            { type: "caption", text: "Specimen III / 33  ·  Imagined Edition" }
+          ]
+        ]
       },
       {
         id: "quant-portfolio",
@@ -1927,7 +2213,102 @@
         },
         width: 1.08, height: 1.68, depth: 0.25,
         chapters: ["Markowitz", "Risk Parity", "Backtesting"],
-        seed: 44
+        seed: 44,
+        pages: [
+          [
+            { type: "h", text: "01 / Overview" },
+            { type: "p", text: "A cross-asset quantitative portfolio system ingesting 12 CSV datasets covering Crypto, Equities, and Commodities. Three optimization strategies implemented with rigorous backtesting." },
+            { type: "spacer", height: 10 },
+            { type: "bullets", items: [
+              "12 asset datasets: Crypto, Equities, Commodities",
+              "3 portfolio strategies implemented",
+              "Backtesting with walk-forward validation",
+              "Efficient Frontier visualization"
+            ]}
+          ],
+          [
+            { type: "h", text: "02 / Data Pipeline" },
+            { type: "flowchart", steps: [
+              "[Raw Data] 12 CSVs: Crypto, Equities",
+              "[Pandas Engine] Time-Series Sync & Imputation",
+              "[Statistical Model] Compute Covariance Matrix",
+              "[SciPy Optimizer] Apply SLSQP Algorithm",
+              "[Output] Efficient Frontier & Optimal Weights"
+            ]},
+            { type: "caption", text: "Figure 1: High-level data ingestion and optimization pipeline" }
+          ],
+          [
+            { type: "h", text: "03 / Core Optimizer" },
+            { type: "code", lang: "python", lines: [
+              "import numpy as np",
+              "from scipy.optimize import minimize",
+              "",
+              "def compute_weights(cov, mu, n):",
+              "    w0 = np.ones(n) / n",
+              "    cons = [{'type': 'eq',",
+              "             'fun': lambda w: np.sum(w)-1}]",
+              "    bounds = [(0, 1)] * n",
+              "    res = minimize(neg_sharpe, w0,",
+              "        method='SLSQP',",
+              "        bounds=bounds,",
+              "        constraints=cons)",
+              "    return res.x"
+            ]}
+          ],
+          [
+            { type: "h", text: "04 / Strategy Comparison" },
+            { type: "table",
+              headers: ["Strategy", "Ann. Return", "Sharpe", "Max DD"],
+              rows: [
+                ["Min Variance", "12.4%", "1.82", "-8.2%"],
+                ["Markowitz", "18.7%", "1.34", "-14.1%"],
+                ["Risk Parity", "15.2%", "1.61", "-9.7%"]
+              ]
+            },
+            { type: "spacer", height: 8 },
+            { type: "caption", text: "Backtest results: 2019–2024 out-of-sample" }
+          ],
+          [
+            { type: "h", text: "05 / Risk Parity Logic" },
+            { type: "p", text: "Risk Parity equalizes each asset's contribution to total portfolio risk, rather than equalizing capital allocation. This produces more stable performance in volatile regimes." },
+            { type: "spacer", height: 10 },
+            { type: "code", lang: "python", lines: [
+              "# Equal Risk Contribution",
+              "def risk_contribution(w, cov):",
+              "    sigma = np.sqrt(w @ cov @ w)",
+              "    mrc = cov @ w / sigma",
+              "    return w * mrc  # per-asset risk"
+            ]}
+          ],
+          [
+            { type: "h", text: "06 / Backtesting Framework" },
+            { type: "numbered", items: [
+              "Walk-forward validation: 252-day train, 63-day test",
+              "Transaction costs: 10 bps per rebalance",
+              "Rebalancing frequency: monthly",
+              "Benchmark: Equal-weight portfolio"
+            ]},
+            { type: "divider" },
+            { type: "caption", text: "Robust out-of-sample evaluation methodology" }
+          ],
+          [
+            { type: "h", text: "07 / Asset Universe" },
+            { type: "table",
+              headers: ["Class", "Assets"],
+              rows: [
+                ["Crypto", "BTC, ETH, SOL, BNB"],
+                ["Equities", "SPY, QQQ, AAPL, MSFT"],
+                ["Commodities", "GLD, SLV, USO, CORN"]
+              ]
+            }
+          ],
+          [
+            { type: "h", text: "08 / Colophon" },
+            { type: "p", text: "Navy green cloth · silver foil. 162 × 240 mm · imagined edition." },
+            { type: "divider" },
+            { type: "caption", text: "Specimen IV / 44  ·  Imagined Edition" }
+          ]
+        ]
       },
       {
         id: "resilientqa",
@@ -1951,7 +2332,102 @@
         },
         width: 1, height: 1.48, depth: 0.3,
         chapters: ["Playwright", "DOM Analysis", "Recovery"],
-        seed: 55
+        seed: 55,
+        pages: [
+          [
+            { type: "h", text: "01 / Overview" },
+            { type: "p", text: "ResilientQA is an AI-powered self-healing test automation platform built on Playwright. It detects broken UI selectors, performs semantic DOM analysis, and automatically repairs failing tests." },
+            { type: "spacer", height: 10 },
+            { type: "bullets", items: [
+              "Detects broken CSS/XPath selectors",
+              "Semantic DOM analysis to find replacements",
+              "ML-ranked candidate selector scoring",
+              "Automated test recovery and validation"
+            ]}
+          ],
+          [
+            { type: "h", text: "02 / Self-Healing Pipeline" },
+            { type: "flowchart", steps: [
+              "[Playwright] Test run — selector fails",
+              "[DOM Crawler] Capture page DOM snapshot",
+              "[Semantic Engine] Analyse element context",
+              "[ML Ranker] Score & rank candidates",
+              "[Healer] Patch test with new selector"
+            ]},
+            { type: "caption", text: "Figure 1: Automated selector recovery pipeline" }
+          ],
+          [
+            { type: "h", text: "03 / Selector Ranking" },
+            { type: "code", lang: "python", lines: [
+              "def rank_candidates(broken, dom_nodes):",
+              "    scores = []",
+              "    for node in dom_nodes:",
+              "        sim = semantic_similarity(",
+              "            broken.context, node.context",
+              "        )",
+              "        attr_score = match_attributes(",
+              "            broken.attrs, node.attrs",
+              "        )",
+              "        scores.append((node, sim + attr_score))",
+              "    return sorted(scores, key=lambda x: -x[1])"
+            ]}
+          ],
+          [
+            { type: "h", text: "04 / DOM Analysis Features" },
+            { type: "table",
+              headers: ["Feature", "Source", "Weight"],
+              rows: [
+                ["Text content", "innerText", "0.35"],
+                ["ARIA label", "aria-label", "0.28"],
+                ["Element tag", "tagName", "0.18"],
+                ["CSS class", "className", "0.12"],
+                ["Position", "getBoundingRect", "0.07"]
+              ]
+            },
+            { type: "caption", text: "Weighted feature vector for candidate scoring" }
+          ],
+          [
+            { type: "h", text: "05 / Playwright Integration" },
+            { type: "code", lang: "javascript", lines: [
+              "// ResilientQA Playwright plugin",
+              "const { healingLocator } = require('resilientqa');",
+              "",
+              "test('Login flow', async ({ page }) => {",
+              "  await page.goto('/login');",
+              "  // Auto-heals if selector breaks:",
+              "  const btn = healingLocator(page,",
+              "    '#submit-btn', { context: 'login' });",
+              "  await btn.click();",
+              "});"
+            ]}
+          ],
+          [
+            { type: "h", text: "06 / Recovery Statistics" },
+            { type: "bullets", items: [
+              "Selector recovery rate: 87% on test suite",
+              "Average healing time: < 2 seconds per test",
+              "False positive rate: < 4%",
+              "Supports: CSS, XPath, ARIA, text selectors"
+            ]},
+            { type: "divider" },
+            { type: "caption", text: "Evaluated on 200-test regression suite" }
+          ],
+          [
+            { type: "h", text: "07 / Design Decisions" },
+            { type: "numbered", items: [
+              "Playwright chosen for cross-browser async API",
+              "Semantic similarity via sentence-transformers",
+              "Candidate ranking keeps human-readable selectors",
+              "Patch is logged and reviewable, not hidden"
+            ]}
+          ],
+          [
+            { type: "h", text: "08 / Colophon" },
+            { type: "p", text: "Citron cloth · dark foil. 150 × 220 mm · imagined edition." },
+            { type: "divider" },
+            { type: "caption", text: "Specimen V / 55  ·  Imagined Edition" }
+          ]
+        ]
       },
       {
         id: "cyber-physical",
@@ -1975,7 +2451,101 @@
         },
         width: 0.96, height: 1.57, depth: 0.24,
         chapters: ["GSM", "Ardupilot", "Team Arrow"],
-        seed: 66
+        seed: 66,
+        pages: [
+          [
+            { type: "h", text: "01 / Overview" },
+            { type: "p", text: "Two hardware projects: a GSM/MQ-6 gas leakage detector for industrial safety, and drone autopilot work with Ardupilot as part of Team Arrow at Nirma University." },
+            { type: "spacer", height: 10 },
+            { type: "bullets", items: [
+              "MQ-6 LPG sensor integration with Arduino",
+              "GSM module for SMS alert on gas detection",
+              "Ardupilot firmware configuration for drones",
+              "Team Arrow: competitive drone racing team"
+            ]}
+          ],
+          [
+            { type: "h", text: "02 / Gas Detector System" },
+            { type: "flowchart", steps: [
+              "[MQ-6 Sensor] Detects LPG / Butane PPM",
+              "[Arduino UNO] Reads analog sensor value",
+              "[Threshold Check] PPM > 400 danger level",
+              "[GSM SIM800L] Sends SMS alert to owner",
+              "[Buzzer + LED] Local audio-visual alarm"
+            ]},
+            { type: "caption", text: "Figure 1: Gas leakage detection and alert flow" }
+          ],
+          [
+            { type: "h", text: "03 / Arduino Sketch" },
+            { type: "code", lang: "python", lines: [
+              "// Gas detector main loop (C++ style)",
+              "int MQ6_PIN = A0;",
+              "int BUZZER = 9;",
+              "int THRESHOLD = 400;",
+              "",
+              "void loop() {",
+              "  int ppm = analogRead(MQ6_PIN);",
+              "  if (ppm > THRESHOLD) {",
+              "    digitalWrite(BUZZER, HIGH);",
+              "    gsm.sendSMS(OWNER, 'GAS ALERT!');",
+              "  }",
+              "}"
+            ]}
+          ],
+          [
+            { type: "h", text: "04 / Hardware Components" },
+            { type: "table",
+              headers: ["Component", "Model", "Role"],
+              rows: [
+                ["Microcontroller", "Arduino UNO", "Central processing"],
+                ["Gas Sensor", "MQ-6", "LPG/Butane detection"],
+                ["GSM Module", "SIM800L", "SMS alerts"],
+                ["Power", "9V Battery", "Portable operation"],
+                ["Output", "Buzzer + LED", "Local alarm"]
+              ]
+            }
+          ],
+          [
+            { type: "h", text: "05 / Ardupilot & Drones" },
+            { type: "p", text: "As part of Team Arrow, configured Ardupilot firmware for multirotor drones. Worked on PID tuning, GPS hold, and failsafe configuration for autonomous flight modes." },
+            { type: "spacer", height: 10 },
+            { type: "bullets", items: [
+              "Ardupilot: open-source autopilot firmware",
+              "Flight modes: Stabilize, AltHold, Loiter, Auto",
+              "PID tuning via Mission Planner GCS",
+              "Telemetry: MAVLink over 915 MHz radio"
+            ]}
+          ],
+          [
+            { type: "h", text: "06 / Flight Mode Table" },
+            { type: "table",
+              headers: ["Mode", "Description", "Use Case"],
+              rows: [
+                ["Stabilize", "Manual + level assist", "Manual flight"],
+                ["AltHold", "Fixed altitude", "Smooth hover"],
+                ["Loiter", "GPS hold position", "Inspection"],
+                ["Auto", "Mission waypoints", "Autonomous"]
+              ]
+            }
+          ],
+          [
+            { type: "h", text: "07 / Lessons in Hardware" },
+            { type: "numbered", items: [
+              "Sensor calibration is non-trivial in real environments",
+              "GSM latency must be factored into alert system design",
+              "PID tuning is iterative — start conservative",
+              "Hardware failures are silent; add watchdog timers"
+            ]},
+            { type: "divider" },
+            { type: "p", text: "Hardware teaches a humility that software rarely demands." }
+          ],
+          [
+            { type: "h", text: "08 / Colophon" },
+            { type: "p", text: "Industrial charcoal cloth · burnt red foil. 146 × 224 mm · imagined edition." },
+            { type: "divider" },
+            { type: "caption", text: "Specimen VI / 66  ·  Imagined Edition" }
+          ]
+        ]
       },
       {
         id: "publications",
@@ -1999,7 +2569,98 @@
         },
         width: 1.12, height: 1.63, depth: 0.28,
         chapters: ["RIACT 2026", "EPFL", "Architecture"],
-        seed: 77
+        seed: 77,
+        pages: [
+          [
+            { type: "h", text: "01 / Research Overview" },
+            { type: "p", text: "Accepted paper at RIACT 2026 on the design and implementation of an Autonomous Disaster Response Robot. The system integrates multi-sensor fusion, autonomous navigation, and remote telemetry." },
+            { type: "spacer", height: 10 },
+            { type: "bullets", items: [
+              "Conference: RIACT 2026",
+              "Topic: Autonomous Disaster Robot",
+              "Status: Accepted & published",
+              "Co-authors: Nirma University team"
+            ]}
+          ],
+          [
+            { type: "h", text: "02 / Robot Architecture" },
+            { type: "flowchart", steps: [
+              "[Sensor Array] Camera, LiDAR, Gas, Thermal",
+              "[Fusion Layer] Kalman filter sensor fusion",
+              "[Navigation] SLAM-based path planning",
+              "[Decision Engine] Hazard classification",
+              "[Operator] Telemetry & remote override"
+            ]},
+            { type: "caption", text: "Figure 1: Autonomous disaster robot system architecture" }
+          ],
+          [
+            { type: "h", text: "03 / Sensor Fusion" },
+            { type: "code", lang: "python", lines: [
+              "# Kalman filter for sensor fusion",
+              "class KalmanFusion:",
+              "    def __init__(self, Q, R):",
+              "        self.Q = Q  # process noise",
+              "        self.R = R  # measurement noise",
+              "        self.P = np.eye(4)",
+              "",
+              "    def update(self, z):",
+              "        K = self.P / (self.P + self.R)",
+              "        self.x = self.x + K*(z - self.x)",
+              "        self.P = (1 - K) * self.P + self.Q"
+            ]}
+          ],
+          [
+            { type: "h", text: "04 / Paper Abstract" },
+            { type: "p", text: "This paper presents the design of a semi-autonomous robot capable of operating in disaster-affected environments. The platform integrates computer vision, gas detection, thermal imaging, and a robust failsafe telemetry link." },
+            { type: "spacer", height: 10 },
+            { type: "table",
+              headers: ["Metric", "Value"],
+              rows: [
+                ["Navigation accuracy", "±12 cm (indoor SLAM)"],
+                ["Gas detection range", "0–1000 PPM LPG"],
+                ["Telemetry latency", "< 80ms (MAVLink)"],
+                ["Autonomous runtime", "22 minutes (2S LiPo"]
+              ]
+            }
+          ],
+          [
+            { type: "h", text: "05 / EPFL Aspirations" },
+            { type: "p", text: "Targeting the EPFL Summer Research Fellowship in the Processor Architecture Lab. Research interest: energy-efficient RISC-V microarchitectures for embedded AI inference at the edge." },
+            { type: "spacer", height: 10 },
+            { type: "bullets", items: [
+              "EPFL PARA Lab: Processor Architecture Research",
+              "Focus: RISC-V + in-memory computing",
+              "Application window: Spring 2026",
+              "Prerequisite: strong systems & arch background"
+            ]}
+          ],
+          [
+            { type: "h", text: "06 / Research Methodology" },
+            { type: "numbered", items: [
+              "Literature survey: 40+ papers on disaster robotics",
+              "Hardware prototype: 3 iteration cycles",
+              "Field tests: simulated rubble environment",
+              "Paper review: double-blind peer review process"
+            ]},
+            { type: "divider" },
+            { type: "caption", text: "Full methodology described in RIACT 2026 proceedings" }
+          ],
+          [
+            { type: "h", text: "07 / Future Directions" },
+            { type: "bullets", items: [
+              "Extend SLAM to outdoor GPS-denied environments",
+              "Integrate LLM for natural language operator commands",
+              "Edge AI inference on RISC-V for onboard decisions",
+              "Swarm coordination for multi-robot deployment"
+            ]}
+          ],
+          [
+            { type: "h", text: "08 / Colophon" },
+            { type: "p", text: "Burgundy cloth · bone foil. 158 × 232 mm · imagined edition." },
+            { type: "divider" },
+            { type: "caption", text: "Specimen VII / 77  ·  Imagined Edition" }
+          ]
+        ]
       }
     ];
 
@@ -2817,10 +3478,376 @@
             return texture;
         }
 
+        // ─── Block Renderer Helpers ─────────────────────────────────────────
+
+        function syntaxTokenize(line, lang) {
+            // Returns [{text, color}] for a line of code
+            const tokens = [];
+            let remaining = line;
+
+            const rules = [
+                // Comments
+                { re: /^(\/\/[^\n]*)/, color: "#6a9955" },
+                { re: /^(#[^\n]*)/, color: "#6a9955" },
+                // Strings
+                { re: /^('[^']*'|"[^"]*"|`[^`]*`)/, color: "#ce9178" },
+                // Keywords
+                { re: /^\b(def|return|import|from|for|if|else|elif|class|async|await|in|not|and|or|True|False|None|const|let|var|function|async|await|new|this|typeof|instanceof|require|module|exports|test|describe|it|expect)\b/, color: "#569cd6" },
+                // Built-ins / types
+                { re: /^\b(int|float|str|bool|list|dict|tuple|set|np|pd|plt|app|ws|ctx)\b/, color: "#4ec9b0" },
+                // Numbers
+                { re: /^\b(\d+\.?\d*)\b/, color: "#b5cea8" },
+                // Decorators / operators
+                { re: /^(@\w+)/, color: "#dcdcaa" },
+                // Function calls
+                { re: /^(\w+)(?=\()/, color: "#dcdcaa" },
+                // Punctuation
+                { re: /^([()\[\]{},:=+\-*/<>!.])/, color: "#d4d4d4" },
+                // Whitespace / default
+                { re: /^(\s+)/, color: null },
+                { re: /^(\w+)/, color: "#d4d4d4" },
+                { re: /^(.)/, color: "#d4d4d4" }
+            ];
+
+            while (remaining.length > 0) {
+                let matched = false;
+                for (const rule of rules) {
+                    const m = remaining.match(rule.re);
+                    if (m) {
+                        tokens.push({ text: m[1], color: rule.color || "#d4d4d4" });
+                        remaining = remaining.slice(m[1].length);
+                        matched = true;
+                        break;
+                    }
+                }
+                if (!matched) {
+                    tokens.push({ text: remaining[0], color: "#d4d4d4" });
+                    remaining = remaining.slice(1);
+                }
+            }
+            return tokens;
+        }
+
+        function renderPageBlocks(ctx, blocks, ink, logicalWidth, logicalHeight) {
+            const ML = 54;               // margin left
+            const MR = logicalWidth - 54; // margin right
+            const CW = MR - ML;           // content width
+            const LINE_H = 19;            // base line height
+            const PARA_FONT = '400 16px "Iowan Old Style", Baskerville, Georgia, serif';
+            const MONO_FONT = '400 12px "Courier New", Courier, monospace';
+            const HEAD_FONT = '500 10px Inter, "Helvetica Neue", Arial, sans-serif';
+
+            let Y = 92; // cursor starts below header rule
+
+            // Helper: wrap and draw text, return new Y
+            function wrapText(text, x, startY, font, lineH, maxW, alpha, maxLines) {
+                ctx.save();
+                ctx.font = font;
+                ctx.globalAlpha = alpha;
+                ctx.textAlign = "left";
+                ctx.textBaseline = "alphabetic";
+                const words = String(text).split(/\s+/);
+                let line = "";
+                let linesDrawn = 0;
+                let curY = startY;
+                for (const word of words) {
+                    if (maxLines && linesDrawn >= maxLines) break;
+                    const candidate = line ? line + " " + word : word;
+                    if (ctx.measureText(candidate).width > maxW && line) {
+                        ctx.fillText(line, x, curY);
+                        linesDrawn++;
+                        curY += lineH;
+                        line = word;
+                    } else {
+                        line = candidate;
+                    }
+                }
+                if (line && (!maxLines || linesDrawn < maxLines)) {
+                    ctx.fillText(line, x, curY);
+                    curY += lineH;
+                }
+                ctx.restore();
+                return curY;
+            }
+
+            for (const block of blocks) {
+                if (Y > logicalHeight - 58) break; // near footer — stop
+
+                ctx.fillStyle = ink;
+                ctx.strokeStyle = ink;
+                ctx.letterSpacing = "0px";
+                ctx.textAlign = "left";
+                ctx.textBaseline = "alphabetic";
+                ctx.globalAlpha = 1;
+
+                // ── HEADING ──────────────────────────────────────────────────
+                if (block.type === "h") {
+                    ctx.font = HEAD_FONT;
+                    ctx.letterSpacing = "1.8px";
+                    ctx.globalAlpha = 0.85;
+                    ctx.fillText(String(block.text).toUpperCase(), ML, Y);
+                    ctx.globalAlpha = 0.38;
+                    ctx.fillRect(ML, Y + 5, CW, 0.75);
+                    Y += 22;
+
+                // ── PARAGRAPH ────────────────────────────────────────────────
+                } else if (block.type === "p") {
+                    Y = wrapText(block.text, ML, Y, PARA_FONT, LINE_H + 2, CW, 0.82, 8);
+                    Y += 6;
+
+                // ── BULLET LIST ──────────────────────────────────────────────
+                } else if (block.type === "bullets") {
+                    for (const item of block.items) {
+                        if (Y > logicalHeight - 60) break;
+                        ctx.save();
+                        ctx.font = PARA_FONT;
+                        ctx.globalAlpha = 0.78;
+                        ctx.fillText("·", ML, Y);
+                        Y = wrapText(item, ML + 14, Y, PARA_FONT, LINE_H, CW - 14, 0.78, 3);
+                        Y += 2;
+                        ctx.restore();
+                    }
+                    Y += 4;
+
+                // ── NUMBERED LIST ─────────────────────────────────────────────
+                } else if (block.type === "numbered") {
+                    block.items.forEach((item, i) => {
+                        if (Y > logicalHeight - 60) return;
+                        ctx.save();
+                        ctx.font = '500 10px Inter, "Helvetica Neue", Arial, sans-serif';
+                        ctx.letterSpacing = "0.5px";
+                        ctx.globalAlpha = 0.65;
+                        ctx.fillText(pad(i + 1) + ".", ML, Y);
+                        Y = wrapText(item, ML + 22, Y, PARA_FONT, LINE_H, CW - 22, 0.78, 3);
+                        Y += 2;
+                        ctx.restore();
+                    });
+                    Y += 4;
+
+                // ── CODE BLOCK ────────────────────────────────────────────────
+                } else if (block.type === "code") {
+                    const lines = block.lines || [];
+                    const codeLineH = 16;
+                    const codePadV = 10;
+                    const codePadH = 10;
+                    const blockH = lines.length * codeLineH + codePadV * 2;
+
+                    // Dark background
+                    ctx.save();
+                    ctx.globalAlpha = 0.92;
+                    ctx.fillStyle = "#1e1e2e";
+                    ctx.fillRect(ML, Y, CW, blockH);
+
+                    // Left accent bar
+                    ctx.fillStyle = "#569cd6";
+                    ctx.globalAlpha = 0.7;
+                    ctx.fillRect(ML, Y, 2.5, blockH);
+
+                    // Code lines with syntax colouring
+                    let codeY = Y + codePadV + codeLineH - 3;
+                    for (const codeLine of lines) {
+                        const tokens = syntaxTokenize(codeLine, block.lang || "python");
+                        let codeX = ML + codePadH + 6;
+                        ctx.font = MONO_FONT;
+                        ctx.letterSpacing = "0px";
+                        ctx.textBaseline = "alphabetic";
+                        ctx.globalAlpha = 1;
+                        for (const tok of tokens) {
+                            ctx.fillStyle = tok.color;
+                            ctx.fillText(tok.text, codeX, codeY);
+                            codeX += ctx.measureText(tok.text).width;
+                            if (codeX > MR - 6) break;
+                        }
+                        codeY += codeLineH;
+                        if (codeY > Y + blockH - 2) break;
+                    }
+                    ctx.restore();
+                    Y += blockH + 10;
+
+                // ── FLOWCHART ─────────────────────────────────────────────────
+                } else if (block.type === "flowchart") {
+                    const steps = block.steps || [];
+                    const boxH = 26;
+                    const arrowGap = 12;
+                    const boxW = CW - 16;
+                    const boxX = ML + 8;
+
+                    ctx.save();
+                    ctx.font = '400 11px "Courier New", Courier, monospace';
+                    ctx.letterSpacing = "0px";
+                    ctx.textBaseline = "middle";
+
+                    for (let si = 0; si < steps.length; si++) {
+                        if (Y + boxH > logicalHeight - 56) break;
+
+                        // Box
+                        ctx.globalAlpha = 0.82;
+                        ctx.strokeStyle = ink;
+                        ctx.fillStyle = "rgba(255,255,255,0.04)";
+                        ctx.lineWidth = 0.85;
+                        ctx.fillRect(boxX, Y, boxW, boxH);
+                        ctx.strokeRect(boxX, Y, boxW, boxH);
+
+                        // Label (truncate if too long)
+                        ctx.fillStyle = ink;
+                        ctx.globalAlpha = 0.9;
+                        let label = steps[si];
+                        while (ctx.measureText(label).width > boxW - 16 && label.length > 8) {
+                            label = label.slice(0, -1);
+                        }
+                        if (label !== steps[si]) label += "…";
+                        ctx.fillText(label, boxX + 8, Y + boxH * 0.5);
+
+                        Y += boxH;
+
+                        // Arrow (not after last)
+                        if (si < steps.length - 1) {
+                            const ax = boxX + boxW * 0.5;
+                            ctx.globalAlpha = 0.55;
+                            ctx.lineWidth = 0.9;
+                            ctx.beginPath();
+                            ctx.moveTo(ax, Y);
+                            ctx.lineTo(ax, Y + arrowGap - 3);
+                            ctx.stroke();
+                            // Arrowhead
+                            ctx.beginPath();
+                            ctx.moveTo(ax - 4, Y + arrowGap - 5);
+                            ctx.lineTo(ax, Y + arrowGap);
+                            ctx.lineTo(ax + 4, Y + arrowGap - 5);
+                            ctx.stroke();
+                            Y += arrowGap;
+                        }
+                    }
+                    ctx.restore();
+                    Y += 10;
+
+                // ── TABLE ─────────────────────────────────────────────────────
+                } else if (block.type === "table") {
+                    const headers = block.headers || [];
+                    const rows = block.rows || [];
+                    const colCount = headers.length;
+                    const colW = CW / colCount;
+                    const rowH = 20;
+                    const tableFont = '400 11px Inter, "Helvetica Neue", Arial, sans-serif';
+
+                    ctx.save();
+                    ctx.font = tableFont;
+                    ctx.letterSpacing = "0px";
+                    ctx.textBaseline = "middle";
+                    ctx.lineWidth = 0.6;
+
+                    // Header row
+                    ctx.fillStyle = ink;
+                    ctx.globalAlpha = 0.12;
+                    ctx.fillRect(ML, Y, CW, rowH);
+
+                    ctx.globalAlpha = 0.9;
+                    ctx.fillStyle = ink;
+                    ctx.font = '600 10px Inter, "Helvetica Neue", Arial, sans-serif';
+                    ctx.letterSpacing = "0.8px";
+                    for (let c = 0; c < colCount; c++) {
+                        ctx.fillText(
+                            String(headers[c] || "").toUpperCase().slice(0, 14),
+                            ML + c * colW + 5,
+                            Y + rowH * 0.5
+                        );
+                        if (c > 0) {
+                            ctx.globalAlpha = 0.25;
+                            ctx.strokeStyle = ink;
+                            ctx.beginPath();
+                            ctx.moveTo(ML + c * colW, Y);
+                            ctx.lineTo(ML + c * colW, Y + rowH);
+                            ctx.stroke();
+                            ctx.globalAlpha = 0.9;
+                        }
+                    }
+                    ctx.globalAlpha = 0.35;
+                    ctx.strokeStyle = ink;
+                    ctx.strokeRect(ML, Y, CW, rowH);
+                    Y += rowH;
+
+                    // Data rows
+                    for (let r = 0; r < rows.length; r++) {
+                        if (Y + rowH > logicalHeight - 56) break;
+                        const row = rows[r];
+
+                        ctx.globalAlpha = r % 2 === 1 ? 0.04 : 0;
+                        ctx.fillStyle = ink;
+                        ctx.fillRect(ML, Y, CW, rowH);
+
+                        ctx.font = tableFont;
+                        ctx.letterSpacing = "0px";
+                        ctx.fillStyle = ink;
+
+                        for (let c = 0; c < colCount; c++) {
+                            ctx.globalAlpha = 0.78;
+                            let cellText = String(row[c] || "");
+                            while (ctx.measureText(cellText).width > colW - 8 && cellText.length > 2) {
+                                cellText = cellText.slice(0, -1);
+                            }
+                            if (cellText !== String(row[c] || "")) cellText += "…";
+                            ctx.fillText(cellText, ML + c * colW + 5, Y + rowH * 0.5);
+
+                            if (c > 0) {
+                                ctx.globalAlpha = 0.15;
+                                ctx.strokeStyle = ink;
+                                ctx.beginPath();
+                                ctx.moveTo(ML + c * colW, Y);
+                                ctx.lineTo(ML + c * colW, Y + rowH);
+                                ctx.stroke();
+                            }
+                        }
+                        ctx.globalAlpha = 0.15;
+                        ctx.strokeStyle = ink;
+                        ctx.strokeRect(ML, Y, CW, rowH);
+                        Y += rowH;
+                    }
+
+                    // Bottom border
+                    ctx.globalAlpha = 0.35;
+                    ctx.beginPath();
+                    ctx.moveTo(ML, Y);
+                    ctx.lineTo(ML + CW, Y);
+                    ctx.stroke();
+                    ctx.restore();
+                    Y += 10;
+
+                // ── CAPTION ───────────────────────────────────────────────────
+                } else if (block.type === "caption") {
+                    ctx.save();
+                    ctx.font = '400 10px "Iowan Old Style", Baskerville, Georgia, serif';
+                    ctx.globalAlpha = 0.52;
+                    ctx.textAlign = "center";
+                    ctx.fillStyle = ink;
+                    ctx.fillText(String(block.text), ML + CW * 0.5, Y + 10);
+                    ctx.restore();
+                    Y += 20;
+
+                // ── DIVIDER ───────────────────────────────────────────────────
+                } else if (block.type === "divider") {
+                    ctx.save();
+                    ctx.globalAlpha = 0.28;
+                    ctx.strokeStyle = ink;
+                    ctx.lineWidth = 0.75;
+                    ctx.beginPath();
+                    ctx.moveTo(ML + CW * 0.2, Y + 6);
+                    ctx.lineTo(ML + CW * 0.8, Y + 6);
+                    ctx.stroke();
+                    ctx.restore();
+                    Y += 18;
+
+                // ── SPACER ────────────────────────────────────────────────────
+                } else if (block.type === "spacer") {
+                    Y += block.height || 12;
+                }
+            }
+        }
+
         function makeInteriorPageTextures(book) {
             const pageCount = 8;
             const inkColor = new THREE.Color(book.color).lerp(new THREE.Color(0x211b16), 0.62);
             const ink = `#${inkColor.getHexString()}`;
+            const pages = book.pages || [];
 
             return Array.from({ length: pageCount }, (_, pageIndex) => {
                 const canvas = document.createElement("canvas");
@@ -2837,6 +3864,7 @@
                 ctx.textAlign = "left";
                 ctx.textBaseline = "alphabetic";
 
+                // Running header
                 ctx.globalAlpha = 0.58;
                 ctx.font = '500 10px Inter, "Helvetica Neue", Arial, sans-serif';
                 ctx.letterSpacing = "1.8px";
@@ -2847,122 +3875,32 @@
                 ctx.fillRect(48, 64, logicalWidth - 96, 1);
                 ctx.globalAlpha = 1;
 
-                if (pageIndex === 0) {
-                    ctx.font = '500 12px Inter, "Helvetica Neue", Arial, sans-serif';
-                    ctx.letterSpacing = "2.3px";
-                    ctx.fillText(book.discipline.toUpperCase(), 54, 174);
-                    ctx.font = `400 ${book.title.length > 10 ? 48 : 58}px "Iowan Old Style", Baskerville, Georgia, serif`;
-                    ctx.letterSpacing = "0px";
-                    drawWrappedCanvasText(ctx, book.title, 52, 246, 18, 58, 2);
-                    ctx.globalAlpha = 0.55;
-                    ctx.font = '400 22px "Iowan Old Style", Baskerville, Georgia, serif';
-                    drawWrappedCanvasText(ctx, book.note, 54, 462, 36, 30, 4);
-                } else if (pageIndex === 1 || pageIndex === 3) {
-                    const chapterIndex = pageIndex === 1 ? 0 : 1;
-                    ctx.font = '500 11px Inter, "Helvetica Neue", Arial, sans-serif';
-                    ctx.letterSpacing = "2px";
-                    ctx.fillText(`CHAPTER ${pad(chapterIndex + 1)}`, 54, 166);
-                    ctx.font = '400 49px "Iowan Old Style", Baskerville, Georgia, serif';
-                    ctx.letterSpacing = "0px";
-                    drawWrappedCanvasText(ctx, book.chapters[chapterIndex], 52, 244, 18, 54, 3);
-                    ctx.globalAlpha = 0.52;
-                    ctx.font = '400 20px "Iowan Old Style", Baskerville, Georgia, serif';
-                    drawWrappedCanvasText(
-                        ctx,
-                        chapterIndex === 0 ? book.note : book.deck,
-                        54,
-                        438,
-                        42,
-                        28,
-                        6
-                    );
-                } else if (pageIndex === 2) {
-                    ctx.font = '500 11px Inter, "Helvetica Neue", Arial, sans-serif';
-                    ctx.letterSpacing = "2px";
-                    ctx.fillText("PLATE 01  /  SYSTEM MOTIF", 54, 146);
-                    ctx.save();
-                    ctx.globalAlpha = 0.58;
-                    drawMotif(ctx, { ...book, foil: ink }, logicalWidth, logicalHeight * 0.92);
-                    ctx.restore();
-                    ctx.globalAlpha = 0.48;
-                    ctx.font = '400 17px "Iowan Old Style", Baskerville, Georgia, serif';
-                    drawWrappedCanvasText(ctx, book.theme, 54, 650, 44, 24, 3);
-                } else if (pageIndex === 4) {
-                    ctx.font = '500 11px Inter, "Helvetica Neue", Arial, sans-serif';
-                    ctx.letterSpacing = "2px";
-                    ctx.fillText(`NOTES  /  ${book.chapters[1].toUpperCase()}`, 54, 138);
-                    ctx.globalAlpha = 0.44;
-                    for (let column = 0; column < 2; column += 1) {
-                        const left = 54 + column * 214;
-                        for (let line = 0; line < 24; line += 1) {
-                            const width = line % 7 === 6 ? 72 + random() * 54 : 138 + random() * 44;
-                            ctx.fillRect(left, 190 + line * 18, width, 1.25);
-                        }
-                    }
-                    ctx.globalAlpha = 0.78;
-                    ctx.strokeRect(54, 654, 404, 54);
-                    ctx.font = '500 10px Inter, "Helvetica Neue", Arial, sans-serif';
-                    ctx.letterSpacing = "1.4px";
-                    ctx.fillText(book.motif.toUpperCase(), 70, 686);
-                } else if (pageIndex === 5) {
-                    ctx.font = '500 11px Inter, "Helvetica Neue", Arial, sans-serif';
-                    ctx.letterSpacing = "2px";
-                    ctx.fillText("CHAPTER 03", 54, 166);
-                    ctx.font = '400 49px "Iowan Old Style", Baskerville, Georgia, serif';
-                    ctx.letterSpacing = "0px";
-                    drawWrappedCanvasText(ctx, book.chapters[2], 52, 244, 18, 54, 3);
-                    ctx.globalAlpha = 0.52;
-                    ctx.font = '400 20px "Iowan Old Style", Baskerville, Georgia, serif';
-                    drawWrappedCanvasText(ctx, book.deck, 54, 438, 42, 28, 6);
-                } else if (pageIndex === 6) {
-                    ctx.font = '500 11px Inter, "Helvetica Neue", Arial, sans-serif';
-                    ctx.letterSpacing = "2px";
-                    ctx.fillText("PLATE 02  /  TECHNICAL SYSTEM", 54, 146);
-                    ctx.save();
-                    ctx.translate(logicalWidth * 0.5, 380);
-                    ctx.globalAlpha = 0.55;
-                    for (let ring = 0; ring < 5; ring += 1) {
-                        const radius = 38 + ring * 34;
-                        ctx.beginPath();
-                        ctx.arc(0, 0, radius, 0, Math.PI * 2);
-                        ctx.stroke();
-                    }
-                    for (let spoke = 0; spoke < 8; spoke += 1) {
-                        const angle = spoke * Math.PI * 0.25;
-                        ctx.beginPath();
-                        ctx.moveTo(Math.cos(angle) * 36, Math.sin(angle) * 36);
-                        ctx.lineTo(Math.cos(angle) * 176, Math.sin(angle) * 176);
-                        ctx.stroke();
-                    }
-                    ctx.restore();
-                    ctx.globalAlpha = 0.48;
-                    ctx.font = '400 17px "Iowan Old Style", Baskerville, Georgia, serif';
-                    drawWrappedCanvasText(ctx, book.theme, 54, 650, 44, 24, 3);
+                // Render blocks for this page if defined
+                const pageBlocks = pages[pageIndex];
+                if (pageBlocks && pageBlocks.length > 0) {
+                    renderPageBlocks(ctx, pageBlocks, ink, logicalWidth, logicalHeight);
                 } else {
-                    ctx.font = '500 11px Inter, "Helvetica Neue", Arial, sans-serif';
-                    ctx.letterSpacing = "2px";
-                    ctx.fillText("COLOPHON", 54, 164);
-                    ctx.font = '400 32px "Iowan Old Style", Baskerville, Georgia, serif';
-                    ctx.letterSpacing = "0px";
-                    ctx.fillText(book.title, 54, 230);
-                    ctx.globalAlpha = 0.58;
-                    ctx.font = '400 18px "Iowan Old Style", Baskerville, Georgia, serif';
-                    drawWrappedCanvasText(
-                        ctx,
-                        `${book.binding}. ${book.format}. Conceived as an original editorial study for Working Volumes.`,
-                        54,
-                        306,
-                        44,
-                        28,
-                        7
-                    );
-                    ctx.globalAlpha = 0.74;
-                    ctx.font = '500 10px Inter, "Helvetica Neue", Arial, sans-serif';
-                    ctx.letterSpacing = "1.8px";
-                    ctx.fillText(`SPECIMEN ${book.roman} / ${book.seed}  ·  IMAGINED EDITION`, 54, 676);
+                    // Fallback: original hardcoded layouts for missing pages
+                    if (pageIndex === 0) {
+                        ctx.font = '500 12px Inter, "Helvetica Neue", Arial, sans-serif';
+                        ctx.letterSpacing = "2.3px";
+                        ctx.fillText(book.discipline.toUpperCase(), 54, 174);
+                        ctx.font = `400 ${book.title.length > 10 ? 48 : 58}px "Iowan Old Style", Baskerville, Georgia, serif`;
+                        ctx.letterSpacing = "0px";
+                        drawWrappedCanvasText(ctx, book.title, 52, 246, 18, 58, 2);
+                        ctx.globalAlpha = 0.55;
+                        ctx.font = '400 22px "Iowan Old Style", Baskerville, Georgia, serif';
+                        drawWrappedCanvasText(ctx, book.note, 54, 462, 36, 30, 4);
+                    } else {
+                        ctx.globalAlpha = 0.52;
+                        ctx.font = '400 20px "Iowan Old Style", Baskerville, Georgia, serif';
+                        drawWrappedCanvasText(ctx, book.deck, 54, 300, 38, 28, 6);
+                    }
                 }
 
+                // Footer rule
                 ctx.globalAlpha = 0.62;
+                ctx.fillStyle = ink;
                 ctx.fillRect(48, logicalHeight - 48, logicalWidth - 96, 1);
                 ctx.globalAlpha = 1;
                 const texture = configureCanvasTexture(new THREE.CanvasTexture(canvas), {
