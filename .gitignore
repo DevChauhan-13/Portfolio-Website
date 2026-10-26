@@ -24,6 +24,7 @@ _research/
 16-RELOOP-CONTENT-PLAN.md
 MASTER-PROMPT-ADD-PROJECT-LIVE.md
 MASTER-PROMPT-ADD-PROJECT-REPO-ONLY.md
+MASTER-PROMPT-ARTWORK-SWAP.md
 
 # ── Environment & secrets (never commit) ─────────────────────
 .env

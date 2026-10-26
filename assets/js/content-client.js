@@ -15,7 +15,7 @@
 
   function load() {
     if (_cache) return Promise.resolve(_cache);
-    return fetch(SITE_BASE + 'assets/data/content.json?v=4', {cache:'reload'})
+    return fetch(SITE_BASE + 'assets/data/content.json?v=5', {cache:'reload'})
       .then(function (r) {
         if (!r.ok) throw new Error('content.json fetch error: ' + r.status);
         return r.json();

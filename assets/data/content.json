@@ -723,72 +723,72 @@
   ],
   "artworks": [
     {
-      "title": "Placeholder One",
-      "medium": "Digital Illustration",
-      "dimensions": "35 × 50 cm",
+      "title": "Exploded View — ThinkPad X1",
+      "medium": "Digital Blueprint",
+      "dimensions": "Vector",
       "images": [
         "assets/images/artworks/art-1.jpg"
       ],
       "buyUrl": null
     },
     {
-      "title": "Placeholder Two",
+      "title": "Koenigsegg Jesko Absolut — Blueprint",
       "medium": "Digital Illustration",
-      "dimensions": "35 × 35 cm",
+      "dimensions": "Vector",
       "images": [
         "assets/images/artworks/art-2.jpg"
       ],
       "buyUrl": null
     },
     {
-      "title": "Placeholder Three",
-      "medium": "Digital Illustration",
-      "dimensions": "35 × 50 cm",
+      "title": "Pagani Huayra — Sakura Dusk",
+      "medium": "Digital Art",
+      "dimensions": "736 × 1104 px",
       "images": [
         "assets/images/artworks/art-3.jpg"
       ],
       "buyUrl": null
     },
     {
-      "title": "Placeholder Four",
-      "medium": "Digital Illustration",
-      "dimensions": "35 × 35 cm",
+      "title": "Silver Sentinel",
+      "medium": "Digital Sculpture",
+      "dimensions": "721 × 1280 px",
       "images": [
         "assets/images/artworks/art-4.jpg"
       ],
       "buyUrl": null
     },
     {
-      "title": "Placeholder Five",
-      "medium": "Digital Illustration",
-      "dimensions": "35 × 50 cm",
+      "title": "The King",
+      "medium": "Dark Digital Art",
+      "dimensions": "675 × 1200 px",
       "images": [
         "assets/images/artworks/art-5.jpg"
       ],
       "buyUrl": null
     },
     {
-      "title": "Placeholder Six",
-      "medium": "Digital Illustration",
-      "dimensions": "20 × 20 cm",
+      "title": "Marble Giants",
+      "medium": "Black & White",
+      "dimensions": "675 × 1200 px",
       "images": [
         "assets/images/artworks/art-6.jpg"
       ],
       "buyUrl": null
     },
     {
-      "title": "Placeholder Seven",
-      "medium": "Digital Illustration",
-      "dimensions": "35 × 35 cm",
+      "title": "Lorem Ipsum",
+      "medium": "Poster Design",
+      "dimensions": "736 × 1030 px",
       "images": [
         "assets/images/artworks/art-7.jpg"
       ],
       "buyUrl": null
     },
     {
-      "title": "Placeholder Eight",
-      "medium": "Digital Illustration",
-      "dimensions": "35 × 50 cm",
+      "title": "The Collector of Faces",
+      "medium": "Cubist Digital Painting",
+      "dimensions": "736 × 736 px",
       "images": [
         "assets/images/artworks/art-8.jpg"
       ],
