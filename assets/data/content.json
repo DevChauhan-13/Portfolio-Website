@@ -1,0 +1,798 @@
+{
+  "homePage": {
+    "portraitImage": "assets/images/portrait.webp?v=3",
+    "illustrationEnabled": true,
+    "illustrationImage": "assets/images/portrait-illustration.webp?v=3",
+    "fluidBgEnabled": true,
+    "fluidBgImage": "assets/images/fluid-bg.jpg?v=3",
+    "fluidBgColor": "#06060f"
+  },
+  "globalSettings": {
+    "email": "chauhandev591@gmail.com",
+    "instagram": "https://www.instagram.com/devchauhan_53/",
+    "linkedin": "https://www.linkedin.com/in/dev-chauhan-b479a1201",
+    "cvEnabled": true,
+    "cvUrl": "assets/Dev_Chauhan_Resume_SWE.pdf"
+  },
+  "projectsPage": {
+    "introText": "Dev Chauhan — 3rd Year CSE student. Experienced in designing, building, and testing full-stack and AI-integrated systems",
+    "skills": [
+      "Full-Stack",
+      "Machine Learning",
+      "Backend API Architecture",
+      "Edge AI & LLM Integration",
+      "UI/UX",
+      "System Design",
+      "Gen-AI",
+      "Context Engineering",
+      "Agentic Systems",
+      "Git/GitHub"
+    ]
+  },
+  "clients": [
+    {
+      "name": "Studio One",
+      "logo": ""
+    },
+    {
+      "name": "Northwind",
+      "logo": ""
+    },
+    {
+      "name": "Acme Digital",
+      "logo": ""
+    },
+    {
+      "name": "Bluebird",
+      "logo": ""
+    },
+    {
+      "name": "Foundry",
+      "logo": ""
+    },
+    {
+      "name": "Cascade",
+      "logo": ""
+    }
+  ],
+  "projects": [
+    {
+      "title": "ReLoop",
+      "slug": "reloop",
+      "order": 1,
+      "year": "2026",
+      "published": true,
+      "type": "Web Platform",
+      "role": "Full-Stack & AI Developer",
+      "client": "Hackathon HackOut'26",
+      "platform": "Web — React + FastAPI",
+      "heroImage": "assets/images/projects/reloop/reloop-hero.jpg",
+      "heroImageMobile": "",
+      "liveUrl": "https://reloop-gamma.vercel.app/",
+      "repoUrl": "https://github.com/DevChauhan-13/ReLoop",
+      "description": "A carbon-aware B2B exchange for surplus packaging. Every match is scored on net CO2e — and the trades that would emit more than they save are suppressed. Built solo for HackOut'26's Circular Carbon Ecosystem theme.",
+      "blocks": [
+        {
+          "_type": "statement",
+          "text": "Not every circular trade is worth making."
+        },
+        {
+          "_type": "chapter",
+          "chapterLabel": "The Problem",
+          "body": "Surplus reusable packaging — cardboard, film, pallets, drums, gaylords — ends up landfilled for three reasons. Buyers won't purchase sight-unseen, so trust never forms. Small lots cost more to ship than they're worth, so logistics economics fail. And circularity claims can't be proven, so impact goes unreported.\nThe key insight: past a distance you can calculate, freight emissions exceed the emissions saved by reuse. Every trade has a carbon break-even radius — and most marketplaces never compute it.\nReLoop was built to make that arithmetic the centre of the product."
+        },
+        {
+          "_type": "imageFullBleed",
+          "image": "assets/images/projects/reloop/reloop-hero.jpg",
+          "alt": "ReLoop landing page",
+          "caption": "Fig. 01 — Landing: the pitch"
+        },
+        {
+          "_type": "stats",
+          "items": [
+            {
+              "value": "CO2e",
+              "label": "net score per match"
+            },
+            {
+              "value": "768-dim",
+              "label": "semantic matching vectors"
+            },
+            {
+              "value": "A/B/C",
+              "label": "AI vision grading"
+            },
+            {
+              "value": "4",
+              "label": "3D decision tools"
+            }
+          ]
+        },
+        {
+          "_type": "challengeSolution",
+          "challengeHeading": "THE PROBLEM",
+          "solutionHeading": "THE SOLUTION",
+          "challenge": "Trust: no buyer commits to material they haven't seen.\nEconomics: small lots are unviable to ship alone.\nImpact: circularity claims are unsupportable without data.",
+          "solution": "AI vision grading scores condition (A/B/C/reject) with contamination flags, so material can be trusted sight-unseen.\nA matching engine combines hard filters, semantic vectors and a weighted composite score — then the carbon engine scores every match on net CO2e and suppresses carbon-negative trades by default.\nRoute optimisation (OR-Tools) and 3D bin packing consolidate loads; a hash-chained ledger issues PDF impact certificates."
+        },
+        {
+          "_type": "marquee",
+          "words": [
+            "CARDBOARD",
+            "OCC",
+            "LDPE FILM",
+            "STRAPPING",
+            "WOODEN PALLETS",
+            "EPAL",
+            "STEEL DRUMS",
+            "GAYLORDS",
+            "RIGID CONTAINERS"
+          ]
+        },
+        {
+          "_type": "imageDuo",
+          "imageLeft": "assets/images/projects/reloop/reloop-dashboard.jpg",
+          "captionLeft": "Fig. 02 — Dashboard: org and platform CO2e saved",
+          "imageRight": "assets/images/projects/reloop/reloop-marketplace.jpg",
+          "captionRight": "Fig. 03 — Marketplace: graded listings"
+        },
+        {
+          "_type": "pullquote",
+          "quote": "Every match in ReLoop is scored on net carbon impact, not just price.",
+          "accentBackground": true
+        },
+        {
+          "_type": "chapter",
+          "chapterLabel": "The Build",
+          "body": "React + TypeScript + Tailwind frontend; FastAPI modular monolith behind it — identity, catalog, grading, matching, carbon, logistics, commerce and reporting services.\nPostgreSQL with PostGIS and pgvector powers geo-filtering and the 768-dim semantic search; Redis handles the hot paths. The 3D suite (Flow Globe, Truck Load Studio, Material Passport, Impact Sankey) runs on React Three Fiber.\nEverything above was scoped in a full PRD before a line of code — personas, SQL schema, API spec, seed plan and a 3-minute demo script."
+        },
+        {
+          "_type": "process",
+          "sectionLabel": "How a trade flows",
+          "processSteps": [
+            {
+              "title": "Vision grading",
+              "description": "Camera-first listing; AI grades condition A/B/C with contamination flags and confidence."
+            },
+            {
+              "title": "Composite matching",
+              "description": "Hard filters + semantic vectors rank buyers against live listings."
+            },
+            {
+              "title": "Carbon scoring",
+              "description": "Net CO2e per match; break-even radius computed; carbon-negative trades suppressed."
+            },
+            {
+              "title": "Logistics",
+              "description": "OR-Tools route optimisation, 3D bin packing, backhaul matching."
+            },
+            {
+              "title": "Impact ledger",
+              "description": "Hash-chained records issue verifiable PDF certificates."
+            }
+          ]
+        },
+        {
+          "_type": "imageSide",
+          "image": "assets/images/projects/reloop/reloop-matches.jpg",
+          "imagePosition": "right",
+          "heading": "Ranked matches, scored on carbon",
+          "copy": "The matches inbox reads like a ranked feed — match percentage on one side, net CO2e on the other.\nMatches past their break-even radius never surface, so the default view is always worth acting on."
+        },
+        {
+          "_type": "imageFloat",
+          "image": "assets/images/projects/reloop/reloop-requirements.jpg",
+          "imagePosition": "left",
+          "caption": "Fig. 04 — Requirements: sourcing streams replace RFPs"
+        },
+        {
+          "_type": "keyInsight",
+          "insightLabel": "Key Insight",
+          "insightText": "Break-even radius = ((EF_virgin - EF_reprocess) x load_factor x 1000) / EF_freight. Ship inside it and reuse wins; ship past it and the trade emits more than it saves — so ReLoop hides it."
+        },
+        {
+          "_type": "roleOverview",
+          "heading": "My Role",
+          "roles": [
+            "Full-Stack Development",
+            "AI Integration",
+            "Carbon Modelling",
+            "3D Suite",
+            "PRD & Architecture"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Meridian",
+      "slug": "meridian",
+      "order": 2,
+      "year": "2025",
+      "published": true,
+      "type": "Quant Platform",
+      "role": "Full-Stack Developer",
+      "client": "Personal Project",
+      "platform": "Web — React + FastAPI",
+      "heroImage": "assets/images/projects/meridian-hero.jpg",
+      "heroImageMobile": "",
+      "liveUrl": "https://meridian-peach-iota.vercel.app/",
+      "repoUrl": "https://github.com/DevChauhan-13/Meridian",
+      "description": "An institutional-grade, multi-asset portfolio optimization and risk engine. Three quantitative models — Minimum Variance, Markowitz Max-Sharpe and Equal Risk Parity — run over live market data with full backtesting, in milliseconds.",
+      "blocks": [
+        {
+          "_type": "statement",
+          "text": "Optimize multi-asset risk. In milliseconds."
+        },
+        {
+          "_type": "chapter",
+          "chapterLabel": "The Goal",
+          "body": "Retail portfolio tools are black boxes: you get a pie chart, not the mathematics. Meridian flips that — deploy modern quantitative algorithms across equities, commodities and digital assets, and derive mathematically optimal allocations yourself.\nThe engine compares a 10-asset traditional universe against a 12-asset extended one that includes crypto, so the cost of diversification decisions is visible, not assumed."
+        },
+        {
+          "_type": "imageFullBleed",
+          "image": "assets/images/projects/meridian-hero.jpg",
+          "alt": "Meridian portfolio builder",
+          "caption": "Fig. 01 — Portfolio Builder with universe presets"
+        },
+        {
+          "_type": "stats",
+          "items": [
+            {
+              "value": "3",
+              "label": "optimization models"
+            },
+            {
+              "value": "12",
+              "label": "asset multi-class universe"
+            },
+            {
+              "value": "6",
+              "label": "API endpoints — optimize, backtest, risk-report..."
+            },
+            {
+              "value": "SLSQP",
+              "label": "solver via scipy"
+            }
+          ]
+        },
+        {
+          "_type": "challengeSolution",
+          "challengeHeading": "THE PROBLEM",
+          "solutionHeading": "THE ENGINE",
+          "challenge": "Optimization results are meaningless without realistic frictions — transaction costs eat theoretical alpha.\nRisk numbers without context (Sharpe, Sortino, drawdown) hide what an allocation actually feels like to hold.\nCustom allocations had no way to be stress-tested against the optimized ones.",
+          "solution": "Backtests rebalance daily with adjustable transaction costs before reporting CAGR, annualized volatility, Sharpe, Sortino and max drawdown.\nA correlation heatmap exposes which assets actually diversify.\nAnalyze My Portfolio mode takes custom weights and runs live stress tests; Compare Universes puts the 10-asset and 12-asset portfolios side by side."
+        },
+        {
+          "_type": "marquee",
+          "words": [
+            "MINIMUM VARIANCE",
+            "MAX-SHARPE",
+            "RISK PARITY",
+            "BACKTESTING",
+            "STRESS TEST",
+            "CORRELATION HEATMAP",
+            "SHARPE",
+            "SORTINO",
+            "MAX DRAWDOWN"
+          ]
+        },
+        {
+          "_type": "imageDuo",
+          "imageLeft": "assets/images/projects/meridian-dashboard.jpg",
+          "captionLeft": "Fig. 02 — Results Dashboard: KPI cards and allocations",
+          "imageRight": "assets/images/projects/meridian-analyze.jpg",
+          "captionRight": "Fig. 03 — Analyze Portfolio: custom weights under stress"
+        },
+        {
+          "_type": "pullquote",
+          "quote": "Derive mathematically optimal allocations via Minimum Variance, Markowitz Max-Sharpe, and Equal Risk Parity.",
+          "accentBackground": true
+        },
+        {
+          "_type": "chapter",
+          "chapterLabel": "The Build",
+          "body": "FastAPI backend: yfinance data loading with a SQLite TTL cache and CSV fallback, SLSQP-based optimization, Pydantic schemas, and Swagger-documented endpoints — /assets, /prices, /optimize, /backtest, /risk-report, /compare.\nReact + TypeScript + Vite frontend with custom CSS: GradientMesh, KpiCard and Heatmap components across Builder, Dashboard, Analyze and Compare pages.\nThe whole stack orchestrates with Docker Compose; the frontend deploys on Vercel."
+        },
+        {
+          "_type": "process",
+          "sectionLabel": "How a run flows",
+          "processSteps": [
+            {
+              "title": "Fetch prices",
+              "description": "yfinance pull, SQLite TTL cache, CSV fallback for offline runs."
+            },
+            {
+              "title": "Select universe",
+              "description": "Presets or hand-picked assets across equities, commodities and crypto."
+            },
+            {
+              "title": "Optimize",
+              "description": "SLSQP solves Minimum Variance, Max-Sharpe or Equal Risk Parity allocations."
+            },
+            {
+              "title": "Backtest",
+              "description": "Daily rebalancing with adjustable transaction costs."
+            },
+            {
+              "title": "Report & compare",
+              "description": "Sharpe, Sortino, CAGR, volatility, max drawdown — side by side across universes."
+            }
+          ]
+        },
+        {
+          "_type": "imageSide",
+          "image": "assets/images/projects/meridian-compare.jpg",
+          "imagePosition": "right",
+          "heading": "Compare universes",
+          "copy": "The 10-asset traditional portfolio against the 12-asset extended one with crypto.\nSame engine, same window — the delta is the entire argument for or against adding an asset class."
+        },
+        {
+          "_type": "keyInsight",
+          "insightLabel": "Key Insight",
+          "insightText": "Equal Risk Parity weights the portfolio so every asset contributes equally to total risk — no single position can dominate the outcome."
+        },
+        {
+          "_type": "roleOverview",
+          "heading": "My Role",
+          "roles": [
+            "Full-Stack Development",
+            "Quant Modelling",
+            "Data Caching Layer",
+            "Docker Orchestration"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ResilientQA",
+      "slug": "resilientqa",
+      "order": 3,
+      "year": "2025",
+      "published": true,
+      "type": "QA Automation",
+      "role": "QA Automation Engineer",
+      "client": "Personal Project",
+      "platform": "Python — Playwright + Pytest",
+      "heroImage": "assets/images/projects/resilientqa-heallog.jpg",
+      "heroImageMobile": "",
+      "repoUrl": "https://github.com/DevChauhan-13/ResillientQA",
+      "description": "A Playwright-based self-healing test automation framework. When UI changes break a locator, it searches the DOM, ranks candidate elements with rule-based heuristics or a Random Forest ranker, and heals the test in real time.",
+      "blocks": [
+        {
+          "_type": "statement",
+          "text": "Broken locators heal themselves."
+        },
+        {
+          "_type": "chapter",
+          "chapterLabel": "The Problem",
+          "body": "Every E2E suite dies the same death: a designer renames a class, an ID becomes a data-attribute, a div gets rewrapped — and half the suite goes red for reasons that have nothing to do with the product being broken.\nTeams accept this as maintenance tax. ResilientQA treats it as a ranking problem the framework can solve itself."
+        },
+        {
+          "_type": "imageContained",
+          "image": "assets/images/projects/resilientqa-pipeline.jpg",
+          "alt": "Self-healing pipeline diagram",
+          "caption": "Fig. 01 — The healing pipeline: detect, search, rank, rewrite"
+        },
+        {
+          "_type": "challengeSolution",
+          "challengeHeading": "BASELINE",
+          "solutionHeading": "SELF-HEALING",
+          "challenge": "A broken locator fails the test and waits for a human to read a stack trace, guess the new selector, and patch it.\nNobody measures how brittle the suite actually is.",
+          "solution": "A HealableLocatorProxy wraps every locator. On failure it parses the live DOM with BeautifulSoup, scores every candidate element with weighted rule-based heuristics (tag, class, text, structural similarity) or a trained Random Forest ranker, and rewrites the locator in real time.\nEvery heal is logged to SQLite, so suite resilience becomes a metric instead of a feeling."
+        },
+        {
+          "_type": "imageFullBleed",
+          "image": "assets/images/projects/resilientqa-heallog.jpg",
+          "alt": "Terminal log of a self-healed test run",
+          "caption": "Fig. 02 — A locator heals mid-run: candidates ranked, best match rewritten, event logged"
+        },
+        {
+          "_type": "marquee",
+          "words": [
+            "PLAYWRIGHT",
+            "PYTEST",
+            "RANDOM FOREST",
+            "SCIKIT-LEARN",
+            "BEAUTIFULSOUP",
+            "SQLITE",
+            "FLASK SANDBOX",
+            "MUTATION ENGINE"
+          ]
+        },
+        {
+          "_type": "chapter",
+          "chapterLabel": "The Mutation Engine",
+          "body": "You can't benchmark self-healing on bugs you find by accident. So ResilientQA ships a Synthetic Mutation Engine: it generates diverse broken-UI states — altered IDs, changed classes, reshuffled DOM structure, decoy elements — across 15 different mutation environments.\nThe mutations double as the training set for the ML ranker; the same environments then benchmark Baseline vs Rule-Based vs ML on Recovery Rate, Precision and Recall."
+        },
+        {
+          "_type": "process",
+          "sectionLabel": "Workflow",
+          "processSteps": [
+            {
+              "title": "Mutate",
+              "description": "mutation_runner.py injects breaks into the Flask demo app and records outcomes."
+            },
+            {
+              "title": "Train",
+              "description": "The healed/broken pairs train the Random Forest ranker (rf_ranker.joblib)."
+            },
+            {
+              "title": "Benchmark",
+              "description": "15 synthetic environments compare Baseline vs Rule-Based vs ML."
+            },
+            {
+              "title": "Report",
+              "description": "Recovery Rate, Precision and Recall land in evaluation reports and charts."
+            }
+          ]
+        },
+        {
+          "_type": "keyInsight",
+          "insightLabel": "Key Insight",
+          "insightText": "Self-healing turns test maintenance into measurement: Recovery Rate, Precision and Recall give a suite a resilience score you can track across releases."
+        },
+        {
+          "_type": "pullquote",
+          "quote": "The framework reads the failure, ranks the DOM, and fixes the test before the run ends.",
+          "accentBackground": true
+        },
+        {
+          "_type": "roleOverview",
+          "heading": "My Role",
+          "roles": [
+            "Framework Architecture",
+            "Healing Engines",
+            "ML Ranker",
+            "Mutation Engine",
+            "Benchmarking"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "VeriPhi",
+      "slug": "veriphi",
+      "order": 4,
+      "year": "2025",
+      "published": true,
+      "type": "Chrome Extension",
+      "role": "Co-Developer — Team VectorX",
+      "client": "Team VectorX",
+      "platform": "Chrome Extension + Node Backend",
+      "heroImage": "assets/images/projects/veriphi-overlay.jpg",
+      "heroImageMobile": "",
+      "liveUrl": "https://veriphii.vercel.app/",
+      "repoUrl": "https://github.com/DevChauhan-13/VeriPhi",
+      "description": "A deep integrity system for the AI era. The Chrome extension scans text as you read, decomposes it into atomic claims, and cross-verifies each one against live search and academic indices — flagging hallucinations with a confidence-gap score.",
+      "blocks": [
+        {
+          "_type": "statement",
+          "text": "LLMs sound confident even when they lie."
+        },
+        {
+          "_type": "chapter",
+          "chapterLabel": "The Problem",
+          "body": "Hallucinated facts don't look hallucinated — the prose is fluent, the tone is certain, and nothing on the page tells you which claims have evidence behind them.\nManual fact-checking breaks at reading speed. VeriPhi moves the check into the browser, in real time."
+        },
+        {
+          "_type": "imageFullBleed",
+          "image": "assets/images/projects/veriphi-overlay.jpg",
+          "alt": "VeriPhi overlay indicators on text",
+          "caption": "Fig. 01 — The overlay in action: green = verified, gold = needs citation, red = hallucination risk"
+        },
+        {
+          "_type": "stats",
+          "items": [
+            {
+              "value": "4",
+              "label": "stage prediction engine"
+            },
+            {
+              "value": "3",
+              "label": "verdict tiers — red / gold / green"
+            },
+            {
+              "value": "60s",
+              "label": "full setup, backend to browser"
+            },
+            {
+              "value": "0",
+              "label": "PII leaves the machine unscrubbed"
+            }
+          ]
+        },
+        {
+          "_type": "chapter",
+          "chapterLabel": "The Prediction Engine",
+          "body": "Atomic Decomposition splits AI output into atomic claims using local heuristics.\nThe Confidence Gap scores each claim: Gap = Linguistic Certainty − Evidence Density. A claim that sounds sure but cites nothing gets flagged — that's the signature of a hallucination.\nCross-Verification sends flagged claims to an orchestrator running real-time queries against Google Search and academic indices.\nSource Integrity then ranks what came back: .gov and .edu domains are Gold Tier, generic blogs are Bronze."
+        },
+        {
+          "_type": "pullquote",
+          "quote": "Gap_Score = Linguistic_Certainty - Evidence_Density",
+          "accentBackground": true
+        },
+        {
+          "_type": "challengeSolution",
+          "challengeHeading": "THE FRICTION",
+          "solutionHeading": "THE SYSTEM",
+          "challenge": "Fact-checking tools make you leave the page, paste text, and wait.\nPrivacy tools that send your whole page to the cloud create the very leak they claim to prevent.",
+          "solution": "The extension injects verdicts into the DOM itself — red, gold and green indicators appear over the claims as you read, no context switch.\nPII is scrubbed locally before anything is transmitted; Precision Mode adds strict academic auditing that downgrades any claim lacking a direct citation."
+        },
+        {
+          "_type": "process",
+          "sectionLabel": "Pipeline",
+          "processSteps": [
+            {
+              "title": "Decompose",
+              "description": "Output splits into atomic claims via local heuristics."
+            },
+            {
+              "title": "Score the gap",
+              "description": "Linguistic certainty vs evidence density per claim."
+            },
+            {
+              "title": "Cross-verify",
+              "description": "Orchestrator queries Google Search + academic indices in real time."
+            },
+            {
+              "title": "Rank sources",
+              "description": ".gov / .edu Gold Tier; weak sources Bronze. Verdict overlays render in-page."
+            }
+          ]
+        },
+        {
+          "_type": "imageDuo",
+          "imageLeft": "assets/images/projects/veriphi-hero.jpg",
+          "captionLeft": "Fig. 02 — The companion site: system init and quick setup",
+          "imageRight": "assets/images/projects/veriphi-engine.jpg",
+          "captionRight": "Fig. 03 — The prediction engine, documented step by step"
+        },
+        {
+          "_type": "chapter",
+          "chapterLabel": "The Build",
+          "body": "A Chrome extension (loaded unpacked, Developer Mode) talking to a Node backend on localhost with Gemini Flash 2.5 for claim analysis and Google Search + academic indices for verification — keys live in .env, never committed.\nA companion landing site documents the algorithm, modules and the 60-second install path (backend keys, npm start, load unpacked).\nBuilt with Team VectorX — Mehdi Namdar, Jiya Patel, Dev Chauhan and Om Patel."
+        },
+        {
+          "_type": "keyInsight",
+          "insightLabel": "Key Insight",
+          "insightText": "Hallucination detection is a gap problem, not a truth problem — you don't need to know the truth to know that certainty without evidence is the red flag."
+        },
+        {
+          "_type": "roleOverview",
+          "heading": "My Role",
+          "roles": [
+            "Extension Development",
+            "Backend Integration",
+            "Landing Site",
+            "Team VectorX"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Autonomous Disaster-Relief Robot",
+      "slug": "riact-robot",
+      "order": 5,
+      "year": "2026",
+      "published": true,
+      "type": "Research Paper",
+      "role": "Co-Author — Robotics Team",
+      "client": "RIACT · Nirma University",
+      "platform": "Robotics — Arduino Mega + Raspberry Pi 5",
+      "heroImage": "assets/images/projects/riact/research-7.jpg",
+      "heroImageMobile": "",
+      "cardImage": "assets/images/projects/riact/card.jpg",
+      "paperUrl": "assets/RIACT-Conference-Paper.pdf",
+      "description": "An approved conference paper (RIACT) on the design of a fully autonomous robot for disaster management — built to enter rubble, find victims by thermal signature, and deliver food and water until human rescuers can plan a safe mission.",
+      "blocks": [
+        {
+          "_type": "statement",
+          "text": "The robot goes in first."
+        },
+        {
+          "_type": "chapter",
+          "chapterLabel": "The Problem",
+          "body": "Earthquakes, landslides, collapsed buildings and mines leave people trapped in rubble — and the site is chaotic, dangerous and time-critical.\nRescuers who enter unknown post-disaster environments face severe injuries from structures nobody has surveyed. The window where victims need food and water most is exactly the window where sending humans is most dangerous."
+        },
+        {
+          "_type": "imageFullBleed",
+          "image": "assets/images/projects/riact/research-7.jpg",
+          "alt": "The autonomous disaster-relief robot",
+          "caption": "Fig. 01 — The robot: two-level mild-steel chassis, rubble-capable wheelbase, conveyor payload deck"
+        },
+        {
+          "_type": "stats",
+          "items": [
+            {
+              "value": "2-level",
+              "label": "mild-steel chassis, 2-3mm plate"
+            },
+            {
+              "value": "6",
+              "label": "conveyor divisions, grouped by item size"
+            },
+            {
+              "value": "2",
+              "label": "compute boards — Arduino Mega + Raspberry Pi 5"
+            },
+            {
+              "value": "4-5cm",
+              "label": "ground clearance under protection plate"
+            }
+          ]
+        },
+        {
+          "_type": "chapter",
+          "chapterLabel": "The Machine",
+          "body": "The chassis is mild steel, 2-3 mm thick, arranged in two levels: motors, wheels, drivers, battery and electronics below; the payload conveyor above. A protection plate under the motors gives 4-5 cm of ground clearance — enough to climb small rubble without damaging the drivetrain.\nThe conveyor belt carries six divisions separated by wedges, grouped by the size of the items being delivered, controlling the drop rate mechanically. Large wheels and a wide wheelbase carry it through rubble-filled terrain; the drive turns a full 360° on the spot when the mission starts."
+        },
+        {
+          "_type": "imageDuo",
+          "imageLeft": "assets/images/projects/riact/machine-left.jpg",
+          "captionLeft": "Fig. 02 — Two-level chassis on the bench: motors, wheels and wiring",
+          "imageRight": "assets/images/projects/riact/machine-right.jpg",
+          "captionRight": "Fig. 03 — The delivery conveyor with divided payload bays"
+        },
+        {
+          "_type": "chapter",
+          "chapterLabel": "The Brain",
+          "body": "An Arduino Mega handles the low level: motors, encoders, ultrasonic sensors and the kill-switch failsafe. A Raspberry Pi 5 runs the autonomy — a thermal camera navigates toward victims by their heat signature, while a camera system streams real-time video and feeds image processing for object identification and environment assessment. The boards talk over UART.\nPower is engineered like the rest of the paper: 12 V battery, regulated 5 V rails for both boards, bus bars for organization, and a calculated runtime from measured component and motor power draw."
+        },
+        {
+          "_type": "process",
+          "sectionLabel": "Mission flow",
+          "processSteps": [
+            {
+              "title": "Enter",
+              "description": "The robot enters the rubble zone with zero human intervention."
+            },
+            {
+              "title": "Navigate",
+              "description": "Thermal camera locks onto victim heat signatures."
+            },
+            {
+              "title": "Assess",
+              "description": "Real-time video and image processing read the environment."
+            },
+            {
+              "title": "Deliver",
+              "description": "The conveyor drops food and water packs at controlled rates."
+            },
+            {
+              "title": "Hold",
+              "description": "Victims are sustained while rescuers plan a practical, safe mission."
+            }
+          ]
+        },
+        {
+          "_type": "pullquote",
+          "quote": "The robot does the task for the rescuers by entering the area and delivering food and water packs for the victims.",
+          "accentBackground": true
+        },
+        {
+          "_type": "keyInsight",
+          "insightLabel": "Key Insight",
+          "insightText": "Full autonomy is what makes the robot useful — it requires no human intervention at the exact moment when human presence is the most dangerous variable in the equation."
+        },
+        {
+          "_type": "roleOverview",
+          "heading": "My Role",
+          "roles": [
+            "Co-Author",
+            "Systems Engineering",
+            "Software & Integration",
+            "Nirma University ECE"
+          ]
+        }
+      ]
+    }
+  ],
+  "journey": [
+    {
+      "company": "Company One",
+      "tag": "Fintech",
+      "period": "2024-2025",
+      "role": "Lead UX/UI Designer - Art Director",
+      "description": "Placeholder entry — replace with your own experience.",
+      "order": 1
+    },
+    {
+      "company": "Company Two",
+      "tag": "Gaming",
+      "period": "2022-2023",
+      "role": "Lead UX/UI Designer",
+      "description": "Placeholder entry — replace with your own experience.",
+      "order": 2
+    },
+    {
+      "company": "Company Three",
+      "tag": "Gaming",
+      "period": "2021-2022",
+      "role": "UX/UI Designer",
+      "description": "Placeholder entry — replace with your own experience.",
+      "order": 3
+    },
+    {
+      "company": "Company Four",
+      "tag": "Media",
+      "period": "2019-2020",
+      "role": "UX/UI Designer",
+      "description": "Placeholder entry — replace with your own experience.",
+      "order": 4
+    }
+  ],
+  "artworks": [
+    {
+      "title": "Placeholder One",
+      "medium": "Digital Illustration",
+      "dimensions": "35 × 50 cm",
+      "images": [
+        "assets/images/artworks/art-1.jpg"
+      ],
+      "buyUrl": null
+    },
+    {
+      "title": "Placeholder Two",
+      "medium": "Digital Illustration",
+      "dimensions": "35 × 35 cm",
+      "images": [
+        "assets/images/artworks/art-2.jpg"
+      ],
+      "buyUrl": null
+    },
+    {
+      "title": "Placeholder Three",
+      "medium": "Digital Illustration",
+      "dimensions": "35 × 50 cm",
+      "images": [
+        "assets/images/artworks/art-3.jpg"
+      ],
+      "buyUrl": null
+    },
+    {
+      "title": "Placeholder Four",
+      "medium": "Digital Illustration",
+      "dimensions": "35 × 35 cm",
+      "images": [
+        "assets/images/artworks/art-4.jpg"
+      ],
+      "buyUrl": null
+    },
+    {
+      "title": "Placeholder Five",
+      "medium": "Digital Illustration",
+      "dimensions": "35 × 50 cm",
+      "images": [
+        "assets/images/artworks/art-5.jpg"
+      ],
+      "buyUrl": null
+    },
+    {
+      "title": "Placeholder Six",
+      "medium": "Digital Illustration",
+      "dimensions": "20 × 20 cm",
+      "images": [
+        "assets/images/artworks/art-6.jpg"
+      ],
+      "buyUrl": null
+    },
+    {
+      "title": "Placeholder Seven",
+      "medium": "Digital Illustration",
+      "dimensions": "35 × 35 cm",
+      "images": [
+        "assets/images/artworks/art-7.jpg"
+      ],
+      "buyUrl": null
+    },
+    {
+      "title": "Placeholder Eight",
+      "medium": "Digital Illustration",
+      "dimensions": "35 × 50 cm",
+      "images": [
+        "assets/images/artworks/art-8.jpg"
+      ],
+      "buyUrl": null
+    }
+  ]
+}

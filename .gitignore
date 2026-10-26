@@ -1,0 +1,57 @@
+# ── Dependencies ─────────────────────────────────────────────
+node_modules/
+
+# ── Internal research & scratch work (original-site clones,
+#    cutout attempts, contact sheets, scratch scripts) ─────────
+_research/
+
+# ── Internal planning docs & AI workflow prompts (private) ───
+01-OVERVIEW.md
+02-DESIGN-SYSTEM.md
+03-PAGE-HOME.md
+04-PAGE-PROJECTS.md
+05-PAGE-ARTWORKS.md
+06-PAGE-CONTACT.md
+07-PAGE-PROJECT-DETAIL.md
+08-CONTENT-DATA.md
+09-ASSETS.md
+10-BUILD-PLAN.md
+11-PHASE1-BUILD-GUIDE.md
+12-PHASE4-BUILD-GUIDE.md
+13-LANDING-FIX-PLAN.md
+14-CHANGES-PLAN.md
+15-DEPLOY-VERCEL.md
+16-RELOOP-CONTENT-PLAN.md
+MASTER-PROMPT-ADD-PROJECT-LIVE.md
+MASTER-PROMPT-ADD-PROJECT-REPO-ONLY.md
+
+# ── Environment & secrets (never commit) ─────────────────────
+.env
+.env.*
+backend/.env
+frontend/.env
+
+# ── Vercel local state ───────────────────────────────────────
+.vercel/
+
+# ── Python scratch caches ────────────────────────────────────
+__pycache__/
+*.pyc
+
+# ── Logs & temp ──────────────────────────────────────────────
+*.log
+npm-debug.log*
+tmp/
+*.tmp
+
+# ── OS junk ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ── Editor / tool workspace files ────────────────────────────
+.vscode/
+.idea/
+.zcode/
+.zcodeignore

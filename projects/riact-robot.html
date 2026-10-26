@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html{background:#1a1614}
+    html,body.page-detail{overflow-y:scroll;scrollbar-width:none;height:auto;}
+    html::-webkit-scrollbar,body.page-detail::-webkit-scrollbar{display:none;}
+  </style>
+  <script>!function(){var t=sessionStorage.getItem('txText'),c=sessionStorage.getItem('txColor');if(t){var d=document.createElement('div');d.id='txInitCover';d.style.cssText='position:fixed;inset:0;z-index:9890;background:'+(c||'#1a1614')+';pointer-events:none;';document.documentElement.appendChild(d);}}();</script>
+  <title>Autonomous Disaster-Relief Robot — Dev Chauhan</title>
+  <meta name="description" content="Project case study.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css?v=9">
+  <link rel="stylesheet" href="../assets/css/project-detail.css?v=10">
+  <link rel="stylesheet" href="../assets/css/nav.css?v=9">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body class="page-detail">
+  <a href="#pdContent" class="skip-to-content">Skip to content</a>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="pd-progress" id="pdProgress"></div>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="cursor-dot"  id="cursorDot"></div>
+  </div>
+  <script>!function(){var mx=parseFloat(sessionStorage.getItem('mx')||''),my=parseFloat(sessionStorage.getItem('my')||'');var x=isNaN(mx)?-200:mx,y=isNaN(my)?-200:my;var d=document.getElementById('cursorDot'),r=document.getElementById('cursorRing');if(d){d.style.left=x+'px';d.style.top=y+'px';}if(r){r.style.left=x+'px';r.style.top=y+'px';}}();</script>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="pd-hero" id="pdHero">
+    <div class="pd-hero-img" aria-hidden="true">
+      <img src="" alt="" id="pdHeroImg">
+    </div>
+    <div class="pd-hero-body">
+      <h1 class="pd-hero-title" id="pdHeroTitle"></h1>
+    </div>
+    <div class="pd-hero-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="pd-hint-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════ META STRIP ══════════ -->
+  <div class="pd-meta" id="pdMeta"></div>
+
+  <!-- ══════════ CONTENT ══════════ -->
+  <main class="pd-content" id="pdContent"></main>
+
+  <!-- ══════════ NEXT PROJECT ══════════ -->
+  <section class="pd-next" id="pdNext" style="display:none">
+    <div class="pd-next-img">
+      <img src="" alt="Next project" id="pdNextImg">
+    </div>
+    <div class="pd-next-overlay"></div>
+    <div class="pd-next-body">
+      <span class="pd-next-label">Next Project</span>
+      <a class="pd-next-link" href="#" id="pdNextLink">
+        <span class="pd-next-title" id="pdNextTitle"></span>
+        <span class="pd-next-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════ PREVIOUS PROJECT ══════════ -->
+  <div class="pd-prev reveal" id="pdPrev" style="display:none">
+    <span class="pd-prev-label">Previous Project</span>
+    <a class="pd-prev-link" href="#" id="pdPrevLink">
+      <span class="pd-prev-arrow" aria-hidden="true">←</span>
+      <span class="pd-prev-title" id="pdPrevTitle"></span>
+    </a>
+  </div>
+
+  <!-- ══════════ CONTACT ══════════ -->
+  <section class="pd-contact">
+    <h2 class="pd-contact-heading reveal">Want to work together?</h2>
+    <a class="pd-contact-btn reveal delay-1" href="mailto:chauhandev591@gmail.com" id="pdContactBtn">Get in touch ↗&#xFE0E;</a>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-main">
+        <nav class="footer-nav">
+          <a href="../index.html" class="footer-nav-link" data-nav-link="/">Home</a>
+          <a href="../projects.html" class="footer-nav-link" data-nav-link="/projects">Projects</a>
+          <a href="../artworks.html" class="footer-nav-link" data-nav-link="/artworks">Artworks</a>
+          <a href="../contact.html" class="footer-nav-link" data-nav-link="/contact">Contact</a>
+        </nav>
+        <div class="footer-right">
+          <a href="https://github.com/DevChauhan-13" class="footer-nav-link footer-instagram" target="_blank" rel="noopener">GitHub ↗&#xFE0E;</a>
+          <a href="https://www.linkedin.com/in/dev-chauhan-b479a1201" class="footer-nav-link" target="_blank" rel="noopener">LinkedIn ↗&#xFE0E;</a>
+          <span class="footer-location">Ahmedabad, India</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 Dev Chauhan. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════ MENU DOTS ══════════ -->
+  <button class="menu-dots" id="menuDots" aria-label="Menu" tabindex="-1" style="z-index:200;"></button>
+
+  <!-- ══════════ PAGE TV OVERLAY ══════════ -->
+  <div class="page-tv-overlay" aria-hidden="true">
+    <div class="page-scanlines"></div>
+    <canvas class="page-grain-canvas" id="pageGrainCanvas"></canvas>
+    <div class="page-scanner-lines">
+      <span style="--dur:10s;--op:0.10"></span>
+      <span style="--dur:13s;--op:0.07"></span>
+      <span style="--dur:17s;--op:0.04"></span>
+    </div>
+    <div class="page-inner-glow"></div>
+    <div class="page-vignette"></div>
+  </div>
+
+  <!-- ══════════ CRT BEVEL / FRAME / STROKE ══════════ -->
+  <div class="page-crt-bevel" aria-hidden="true"></div>
+  <div class="page-tv-frame" aria-hidden="true"></div>
+  <svg class="page-tv-stroke" aria-hidden="true"></svg>
+  <script>
+    (function () {
+      var W = window.innerWidth, H = window.innerHeight, m = W <= 768;
+      var MC = m ? 12 : 38, MM = m ? 4 : 8;
+      var R = m ? Math.min(Math.max(18, W * .03), 28) : Math.min(Math.max(40, W * .042), 70);
+      var i = 'M ' + (MC + R) + ',' + MC +
+        ' Q ' + (W / 2) + ',' + MM + ' ' + (W - MC - R) + ',' + MC +
+        ' Q ' + (W - MC) + ',' + MC + ' ' + (W - MC) + ',' + (MC + R) +
+        ' Q ' + (W - MM) + ',' + (H / 2) + ' ' + (W - MC) + ',' + (H - MC - R) +
+        ' Q ' + (W - MC) + ',' + (H - MC) + ' ' + (W - MC - R) + ',' + (H - MC) +
+        ' Q ' + (W / 2) + ',' + (H - MM) + ' ' + (MC + R) + ',' + (H - MC) +
+        ' Q ' + MC + ',' + (H - MC) + ' ' + MC + ',' + (H - MC - R) +
+        ' Q ' + MM + ',' + (H / 2) + ' ' + MC + ',' + (MC + R) +
+        ' Q ' + MC + ',' + MC + ' ' + (MC + R) + ',' + MC + ' Z';
+      var o = 'M 0,0 L ' + W + ',0 L ' + W + ',' + H + ' L 0,' + H + ' Z';
+      var f = document.querySelector('.page-tv-frame');
+      var b = document.querySelector('.page-crt-bevel');
+      var sv = document.querySelector('.page-tv-stroke');
+      if (f) { f.style.clipPath = "path(evenodd, '" + o + ' ' + i + "')"; f.style.visibility = 'visible'; }
+      if (b) b.style.clipPath = "path('" + i + "')";
+      if (sv) {
+        sv.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+        sv.style.clipPath = "path('" + i + "')";
+        var p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        p.setAttribute('d', i);
+        p.setAttribute('fill', 'none');
+        p.setAttribute('stroke', 'rgba(30,28,26,0.10)');
+        p.setAttribute('stroke-width', '6');
+        sv.appendChild(p);
+      }
+    })();
+  </script>
+
+  <script src="../assets/js/transition.js?v=9" defer></script>
+  <script src="../assets/js/content-client.js?v=10" defer></script>
+  <script src="../assets/js/project-detail.js?v=11" defer></script>
+  <script src="../assets/js/nav.js?v=9" defer></script>
+  <script src="../assets/js/tv-overlay.js?v=9" defer></script>
+</body>
+</html>

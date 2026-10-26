@@ -1,0 +1,118 @@
+/* ================================================================
+   HIDDEN ARCADE GAMES — games.css (shared shell)
+   Palette vars are set inline by each game's JS.
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.game-overlay {
+  position: fixed; inset: 0; z-index: 9600;
+  background: var(--game-bg, #010101);
+  display: flex; flex-direction: column; align-items: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s ease;
+  overflow: hidden;
+}
+.game-overlay.is-open { opacity: 1; pointer-events: auto; cursor: none; }
+body.game-open { overflow: hidden !important; }
+body.game-canvas-hover .cursor { opacity: 0 !important; }
+
+/* HUD */
+.game-hud {
+  width: 100%;
+  display: flex; align-items: flex-end; justify-content: space-between;
+  min-height: 104px;
+  padding: 0 104px 14px;
+  position: relative;
+}
+.game-hud-score { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.pong-score-num,
+.pong-score-lbl {
+  font-family: 'Press Start 2P', monospace;
+}
+.pong-score-num { font-size: 22px; color: var(--game-fg, #00ff88); }
+.pong-score-lbl { font-size: 7px; color: var(--game-fg-dim, rgba(255,255,255,0.35)); letter-spacing: 0.10em; }
+.game-title-label {
+  position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
+  font-family: 'Press Start 2P', monospace; font-size: 12px;
+  letter-spacing: 0.2em; color: var(--game-head, #ffffff);
+}
+.game-hud-right { display: flex; align-items: flex-end; gap: 8px; }
+.game-pause-btn, .game-close {
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  background: transparent;
+  border: 1px solid var(--game-border, rgba(255,255,255,0.22));
+  color: var(--game-fg, #00ff88);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px; cursor: none;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+.game-close { font-size: 14px; }
+.game-pause-btn:hover, .game-close:hover {
+  border-color: var(--game-fg, #00ff88);
+  color: var(--game-head, #ffffff);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Body / canvas */
+.game-body {
+  display: flex; flex-direction: row; align-items: stretch; justify-content: center;
+  flex: 1; width: 100%;
+  padding: 0 64px 64px;
+}
+.game-canvas-wrap {
+  position: relative; flex: 1;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--game-border, rgba(255,255,255,0.18));
+  overflow: hidden;
+}
+.game-canvas-wrap canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  display: block;
+}
+.game-canvas-wrap::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(0deg,
+    transparent 0 2px, rgba(0, 0, 0, 0.10) 2px 4px);
+}
+body.game-canvas-hover .game-canvas-wrap { border-color: var(--game-fg, #00ff88); }
+
+/* Mode select (shared) */
+.pong-mode-select {
+  position: absolute; inset: 0; z-index: 5;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 32px;
+  background: rgba(6, 12, 26, 0.92);
+}
+.pong-mode-title {
+  font-family: 'Press Start 2P', monospace; font-size: 13px;
+  letter-spacing: 0.18em; color: #ffffff;
+}
+.pong-mode-options { display: flex; gap: 16px; }
+.pong-mode-btn {
+  font-family: 'Press Start 2P', monospace; font-size: 9px;
+  letter-spacing: 0.10em;
+  color: rgba(96, 165, 250, 0.65);
+  background: rgba(96, 165, 250, 0.04);
+  border: 1px solid rgba(96, 165, 250, 0.22);
+  padding: 18px 22px; min-width: 88px;
+  cursor: none;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.pong-mode-btn:hover, .pong-mode-btn.is-selected {
+  background: rgba(96, 165, 250, 0.14);
+  border-color: rgba(96, 165, 250, 0.70);
+  color: #ffffff;
+}
+.pong-mode-hint {
+  font-family: 'Press Start 2P', monospace; font-size: 9px;
+  letter-spacing: 0.10em;
+  color: rgba(96, 165, 250, 0.55);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .game-hud { padding: 0 80px 14px; }
+  .game-body { padding: 0 0 64px; }
+}

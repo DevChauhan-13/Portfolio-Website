@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>html{background:#1a1614}</style>
+  <script>!function(){var t=sessionStorage.getItem('txText'),c=sessionStorage.getItem('txColor');if(t){var d=document.createElement('div');d.id='txInitCover';d.style.cssText='position:fixed;inset:0;z-index:9890;background:'+(c||'#1a1614')+';pointer-events:none;';document.documentElement.appendChild(d);}}();</script>
+  <title>Contact — Dev Chauhan</title>
+  <meta name="description" content="Get in touch — open for brand identity, visual design and creative collaborations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;700;900&family=Space+Grotesk:wght@400;500;600;700&family=Press+Start+2P&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
+  <link rel="stylesheet" href="assets/css/contact.css?v=4">
+  <link rel="stylesheet" href="assets/css/nav.css?v=8">
+  <link rel="stylesheet" href="assets/css/games.css?v=8">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body class="page-contact">
+  <a href="#ctHero" class="skip-to-content">Skip to content</a>
+
+  <!-- ══════════ STARS ══════════ -->
+  <canvas id="starsCanvas" class="stars-canvas" aria-hidden="true"></canvas>
+
+  <!-- ══════════ UFO CURSOR ══════════ -->
+  <div class="ufo-cursor" id="ufoCursor" aria-hidden="true">
+    <div class="ufo-beam"></div>
+    <svg class="ufo-svg" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 22 Q33 10 40 9 Q47 10 50 22 Z"
+            fill="rgba(190,210,255,0.82)" stroke="rgba(255,255,255,0.55)" stroke-width="0.8"/>
+      <path d="M33 20 Q35 13 38 11" stroke="rgba(255,255,255,0.55)" stroke-width="0.9"
+            stroke-linecap="round"/>
+      <ellipse cx="40" cy="24" rx="32" ry="9"
+               fill="rgba(155,155,200,0.88)" stroke="rgba(255,255,255,0.45)" stroke-width="0.8"/>
+      <ellipse cx="40" cy="21" rx="28" ry="4.5" fill="rgba(220,225,255,0.18)"/>
+      <circle cx="14" cy="24" r="2.2" fill="#a78bfa" class="ufo-light"/>
+      <circle cx="23" cy="29" r="2"   fill="#818cf8" class="ufo-light"/>
+      <circle cx="40" cy="31" r="2.4" fill="#a78bfa" class="ufo-light"/>
+      <circle cx="57" cy="29" r="2"   fill="#fbbf24" class="ufo-light"/>
+      <circle cx="66" cy="24" r="2.2" fill="#fb923c" class="ufo-light"/>
+    </svg>
+  </div>
+
+  <!-- ══════════ CONTACT ══════════ -->
+  <main class="contact-wrap">
+    <header>
+      <section class="ct-hero" id="ctHero">
+        <h1 class="ct-titles">
+          <span class="ct-line ct-line--split" id="ctLine0">
+            <span class="ct-word">GET</span>
+            <span class="ct-word">IN</span>
+          </span>
+          <span class="ct-line" id="ctLine1">TOUCH</span>
+        </h1>
+
+        <div class="ct-mobile-ufo-section" aria-hidden="true">
+          <svg class="ct-mobile-ufo-svg" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 22 Q33 10 40 9 Q47 10 50 22 Z"
+                  fill="rgba(190,210,255,0.82)" stroke="rgba(255,255,255,0.55)" stroke-width="0.8"/>
+            <path d="M33 20 Q35 13 38 11" stroke="rgba(255,255,255,0.55)" stroke-width="0.9" stroke-linecap="round"/>
+            <ellipse cx="40" cy="24" rx="32" ry="9"
+                     fill="rgba(155,155,200,0.88)" stroke="rgba(255,255,255,0.45)" stroke-width="0.8"/>
+            <ellipse cx="40" cy="21" rx="28" ry="4.5" fill="rgba(220,225,255,0.18)"/>
+            <circle cx="14" cy="24" r="2.2" fill="#a78bfa" class="ufo-light"/>
+            <circle cx="23" cy="29" r="2"   fill="#818cf8" class="ufo-light"/>
+            <circle cx="40" cy="31" r="2.4" fill="#a78bfa" class="ufo-light"/>
+            <circle cx="57" cy="29" r="2"   fill="#fbbf24" class="ufo-light"/>
+            <circle cx="66" cy="24" r="2.2" fill="#fb923c" class="ufo-light"/>
+          </svg>
+          <div class="ct-mobile-beam-cone"></div>
+        </div>
+
+        <div class="ct-right" id="ctRight">
+          <div class="ct-info">
+            <div class="ct-info-email-wrap" id="ctEmailWrap">
+              <span class="ct-email-pointer" aria-hidden="true"></span>
+              <a href="mailto:chauhandev591@gmail.com" class="ct-info-email" id="ctEmail">chauhandev591@gmail.com</a>
+            </div>
+            <div class="ct-info-links">
+              <a href="https://github.com/DevChauhan-13" class="ct-info-link" target="_blank" rel="noopener">GitHub &#8599;&#xFE0E;</a>
+              <a href="https://www.linkedin.com/in/dev-chauhan-b479a1201" class="ct-info-link" target="_blank" rel="noopener">LinkedIn &#8599;&#xFE0E;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <footer class="site-footer ct-footer">
+      <div class="footer-inner">
+        <div class="footer-main">
+          <nav class="footer-nav">
+            <a href="index.html" class="footer-nav-link" data-nav-link="/">Home</a>
+            <a href="projects.html" class="footer-nav-link" data-nav-link="/projects">Projects</a>
+            <a href="artworks.html" class="footer-nav-link" data-nav-link="/artworks">Artworks</a>
+            <a href="contact.html" class="footer-nav-link" aria-current="page" data-nav-link="/contact">Contact</a>
+          </nav>
+          <div class="footer-right">
+            <a href="https://github.com/DevChauhan-13" class="footer-nav-link" target="_blank" rel="noopener">GitHub &#8599;&#xFE0E;</a>
+            <a href="https://www.linkedin.com/in/dev-chauhan-b479a1201" class="footer-nav-link" target="_blank" rel="noopener">LinkedIn &#8599;&#xFE0E;</a>
+            <span class="footer-location">Ahmedabad, India</span>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="footer-copy">© 2026 Dev Chauhan. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ══════════ CONTACT OVERLAY (form) ══════════ -->
+  <div class="ct-overlay" id="ctOverlay" role="dialog" aria-modal="true" aria-label="Send a message" aria-hidden="true">
+    <button class="ct-overlay-close" id="ctOverlayClose" aria-label="Close">&#x2715;</button>
+
+    <div class="ct-overlay-inner" id="ctOverlayInner">
+      <div class="ct-overlay-header">
+        <span class="ct-overlay-label">Send a message</span>
+        <h2 class="ct-overlay-title">Let's<br>talk.</h2>
+      </div>
+
+      <form class="ct-overlay-form" id="ctOverlayForm" novalidate>
+        <p style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden" aria-hidden="true">
+          <label>Don't fill this: <input name="bot-field" tabindex="-1"></label>
+        </p>
+
+        <div class="ct-ofield">
+          <label class="ct-ofield-label" for="ctOName">Name</label>
+          <input class="ct-ofield-input" type="text" id="ctOName" name="name"
+                 placeholder="Your name" autocomplete="name" required>
+        </div>
+
+        <div class="ct-ofield">
+          <label class="ct-ofield-label" for="ctOEmail">Email</label>
+          <input class="ct-ofield-input" type="email" id="ctOEmail" name="email"
+                 placeholder="your@email.com" autocomplete="email" required>
+        </div>
+
+        <div class="ct-ofield">
+          <label class="ct-ofield-label" for="ctOMessage">Message</label>
+          <textarea class="ct-ofield-input" id="ctOMessage" name="message"
+                    placeholder="What are you working on?" rows="4" required></textarea>
+        </div>
+
+        <div class="ct-overlay-actions">
+          <button class="ct-overlay-submit" type="submit" id="ctOverlaySubmit">
+            <span id="ctOverlaySubmitLabel">Send message</span>
+            <span aria-hidden="true">&#8599;&#xFE0E;</span>
+          </button>
+        </div>
+      </form>
+
+      <div class="ct-overlay-success" id="ctOverlaySuccess" hidden>
+        <p class="ct-overlay-success-title">Message sent.</p>
+        <p class="ct-overlay-success-sub">I'll get back to you soon.</p>
+      </div>
+
+      <div class="ct-overlay-error" id="ctOverlayError" hidden>
+        <p class="ct-overlay-error-text">Something went wrong —
+          <a href="mailto:chauhandev591@gmail.com" class="ct-overlay-error-link">email directly</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ PAGE TRANSITION OVERLAY (legacy) ══════════ -->
+  <div id="pageOverlay"><span class="overlay-label" id="overlayLabel"></span></div>
+
+  <!-- ══════════ PAGE TV OVERLAY ══════════ -->
+  <div class="page-tv-overlay" aria-hidden="true">
+    <div class="page-scanlines"></div>
+    <canvas class="page-grain-canvas" id="pageGrainCanvas"></canvas>
+    <div class="page-scanner-lines">
+      <span style="--dur:10s;--op:0.10"></span>
+      <span style="--dur:13s;--op:0.07"></span>
+      <span style="--dur:17s;--op:0.04"></span>
+    </div>
+    <div class="page-inner-glow"></div>
+    <div class="page-vignette"></div>
+  </div>
+
+  <!-- ══════════ CRT BEVEL / FRAME / STROKE ══════════ -->
+  <div class="page-crt-bevel" aria-hidden="true"></div>
+  <div class="page-tv-frame" aria-hidden="true"></div>
+  <svg class="page-tv-stroke" aria-hidden="true"></svg>
+  <script>
+    (function () {
+      var W = window.innerWidth, H = window.innerHeight, m = W <= 768;
+      var MC = m ? 12 : 38, MM = m ? 4 : 8;
+      var R = m ? Math.min(Math.max(18, W * .03), 28) : Math.min(Math.max(40, W * .042), 70);
+      var i = 'M ' + (MC + R) + ',' + MC +
+        ' Q ' + (W / 2) + ',' + MM + ' ' + (W - MC - R) + ',' + MC +
+        ' Q ' + (W - MC) + ',' + MC + ' ' + (W - MC) + ',' + (MC + R) +
+        ' Q ' + (W - MM) + ',' + (H / 2) + ' ' + (W - MC) + ',' + (H - MC - R) +
+        ' Q ' + (W - MC) + ',' + (H - MC) + ' ' + (W - MC - R) + ',' + (H - MC) +
+        ' Q ' + (W / 2) + ',' + (H - MM) + ' ' + (MC + R) + ',' + (H - MC) +
+        ' Q ' + MC + ',' + (H - MC) + ' ' + MC + ',' + (H - MC - R) +
+        ' Q ' + MM + ',' + (H / 2) + ' ' + MC + ',' + (MC + R) +
+        ' Q ' + MC + ',' + MC + ' ' + (MC + R) + ',' + MC + ' Z';
+      var o = 'M 0,0 L ' + W + ',0 L ' + W + ',' + H + ' L 0,' + H + ' Z';
+      var f = document.querySelector('.page-tv-frame');
+      var b = document.querySelector('.page-crt-bevel');
+      var sv = document.querySelector('.page-tv-stroke');
+      if (f) { f.style.clipPath = "path(evenodd, '" + o + ' ' + i + "')"; f.style.visibility = 'visible'; }
+      if (b) b.style.clipPath = "path('" + i + "')";
+      if (sv) {
+        sv.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+        sv.style.clipPath = "path('" + i + "')";
+        var p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        p.setAttribute('d', i);
+        p.setAttribute('fill', 'none');
+        p.setAttribute('stroke', 'rgba(30,28,26,0.10)');
+        p.setAttribute('stroke-width', '6');
+        sv.appendChild(p);
+      }
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="assets/js/transition.js?v=8" defer></script>
+  <script src="assets/js/content-client.js?v=10" defer></script>
+  <script src="assets/js/nav.js?v=9" defer></script>
+  <script src="assets/js/contact.js?v=12" defer></script>
+  <script src="assets/js/spaceinvaders.js?v=8" defer></script>
+  <script src="assets/js/tv-overlay.js?v=8" defer></script>
+</body>
+</html>
